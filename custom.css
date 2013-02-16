@@ -1,0 +1,167 @@
+/* 
+CUSTOM STYLESHEET
+---------------------
+
+Instructions:
+
+Add your custom styles in this file instead of style.css so it 
+is easier to update the theme. Simply copy an existing style 
+from style.css to this file, and modify it to your liking. */
+
+.entry ol li {
+	padding-bottom: 10px;
+}
+
+.entry ul li {
+	padding-bottom: 10px;
+}
+
+.entry ol {
+	list-style-type: decimal;
+}
+
+img.framed-thumb {
+	background: none repeat scroll 0 0 rgba(255, 255, 255, 0.7);
+	border: 1px solid #E6E6E6;
+	padding: 5px !important;
+}
+
+.entry ul.square {list-style-type:square;}
+
+/* CUSTOM CODE LANDING PAGE V1 */
+#lp-wrapper {width:960px; height:auto;}
+#lp-video {
+	background-image:url(http://www.builtlean.com/wp-content/uploads/2012/06/lp-video.jpg);
+	background-repeat:no-repeat;
+	width:512px;
+	height:288px;
+	float:left;
+	overflow:hidden;
+	padding-top:163px;
+	padding-left:10px;
+	padding-right:49px;
+	padding-bottom:51px;
+}
+#lp-optin {
+	background-image:url(http://www.builtlean.com/wp-content/uploads/2012/06/lp-optin.jpg);
+	background-repeat:no-repeat;
+	float:right;
+	width:311px;
+	padding-left:39px;
+	padding-right:39px;
+	height:250px;
+	overflow:hidden;
+	padding-top:247px;
+}
+#lp-guys {
+	background-image:url(http://www.builtlean.com/wp-content/uploads/2012/06/lp-guys.jpg);
+	background-repeat:no-repeat;
+	width:960px;
+	height:420px;
+	overflow:hidden;	
+	float:left;
+}
+#lp-seen {
+	background-image:url(http://www.builtlean.com/wp-content/uploads/2012/06/lp-seen.jpg);
+	background-repeat:no-repeat;
+	width:960px;
+	height:180px;
+	overflow:hidden;
+	float:left;
+}
+/* END LANDING PAGE V1 */
+
+#subscribe_ribbon {
+    background: url(images/subscribe_ribbon.png) no-repeat top center;
+    height: 117px;
+    position: relative;
+}
+    #to_privacy {
+        display: block;
+        position: absolute;
+        top: 76px;
+			left: 766px;
+			height: 15px;
+			width: 125px;
+    }
+    
+    #ribbon_text_input {
+        position: absolute;
+        left: 505px;
+        top: 30px;
+        border: 2px solid #ECECEC;
+        width: 180px;
+        padding: 9px 20px 9px 10px;
+        border-radius: 5px;
+        -moz-border-radius: 5p;
+        -webkit-border-radius: 5px;
+        background: url(images/subscribe_envelope.jpg) #fff no-repeat 188px center;
+    }
+        #ribbon_text_input:focus {
+           /* border: 1px solid #1f1f1f;*/
+        }
+    
+    #ribbon_submit_input {
+        position: absolute;
+        left: 730px;
+        top: 30px;
+        border-radius: 5px;
+        -moz-border-radius: 5p;
+        -webkit-border-radius: 5px;
+        text-transform: uppercase;
+        /*background: #E65916;*/
+        color: white;
+        font-weight: bold;
+        text-shadow: 0px 1px 5px #444;
+        cursor: pointer;
+        line-height: 19px;
+        padding: 9px 20px 9px 10px;
+        border: 1px solid #CA5113;
+		  border-bottom: 1px solid #A73800;
+        background-color: #E65916;
+			background-image: -webkit-gradient(linear,left top,left bottom,from(#FF9766),to(#E65916));
+			background-image: -webkit-linear-gradient(top,#FF9766,#E65916);
+			background-image: -moz-linear-gradient(top,#FF9766,#E65916);
+			background-image: -ms-linear-gradient(top,#FF9766,#E65916);
+			background-image: -o-linear-gradient(top,#FF9766,#E65916);
+			background-image: linear-gradient(to bottom,#FF9766,#E65916);
+			-webkit-box-shadow: inset 0 1px 0 rgba(255, 207, 189, 0.6);
+			box-shadow: inset 0 1px 0 rgba(255, 207, 189, 0.6);
+			-moz-box-shadow: inset 0 1px 0 rgba(255, 207, 189, 0.6);
+			filter:  progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#FF9766', endColorstr='#E65916'); /* IE6 & IE7 */
+			-ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#FF9766', endColorstr='#E65916')";  /* IE8 */
+    }
+        #ribbon_submit_input:hover {
+            background: #f56e2f;
+        }
+        
+#wrap_banner {
+    position: relative;
+}
+    #wrap_banner #buy_now {
+        position: absolute;
+        display: block;
+        width: 281px;
+        height: 39px;
+        top: 246px;
+        left: 655px;
+        margin: 0;
+    }
+        #wrap_banner #buy_now:hover {
+            text-decoration: none;
+        }
+        
+    #wrap_banner #learn_more {
+        position: absolute;
+        display: block;
+        top: 250px;
+        left: 505px;
+        width: 120px;
+        height: 27px;
+    }
+    
+#logos_container {
+    text-align: center;
+    margin-top: 15px;
+}
+

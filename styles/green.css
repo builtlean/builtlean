@@ -1,0 +1,25 @@
+a, 
+a:hover, 
+.widget a:hover, 
+.entry-meta a,
+.related-posts li a:hover,
+.wp-pagenavi a,
+.wp-pagenavi .on, 
+.wp-pagenavi .current { 
+	color: #599D32; 
+}
+
+.widget_tj_twitter li a { 
+	color: #599D32; 
+}
+.widget_tj_twitter li a.time { color: #999; }
+
+#primary-nav,
+.readmore { 
+	background-color: #599D32 !important; 
+}
+
+.post-number {
+	background:#599D32; 
+}
+

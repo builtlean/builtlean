@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US" xml:lang="en-US">
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Fitness Tips to Get Lean, Toned, &amp; Lose Fat | BuiltLean.com</title>
+
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="stylesheet" type="text/css" media="all" href="http://www.builtlean.com/wp-content/themes/builtlean/style.css" />
+<link rel="alternate" type="application/rss+xml" title="BuiltLean.com RSS Feed" href="http://www.builtlean.com/feed/" />
+<link rel="alternate" type="application/atom+xml" title="BuiltLean.com Atom Feed" href="http://www.builtlean.com/feed/atom/" />
+<link rel="pingback" href="http://www.builtlean.com/xmlrpc.php" />
+<?php wp_head(); ?>
+</head>
+
+<body <?php body_class(); ?>>
+
+<div id="primary-nav">
+<div style="margin:18px auto; width:969px;">
+ <div class="logo"><a href="http://www.builtlean.com"><img src="http://www.builtlean.com/wp-content/themes/builtlean/images/logo.png" width="275" height="37" alt="BuiltLean.com" id="logo"/></a></div> 
+          
+          <div id="search">
+			<form method="get" id="searchform" action="http://www.builtlean.com">
+				<input type="text" class="field" name="s" id="s"  value="Search BuiltLean..." onfocus="if (this.value == 'Search BuiltLean...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Search BuiltLean...';}" />
+				<input class="submit btn" type="image" src="http://www.builtlean.com/wp-content/themes/builtlean/images/search.png" value="Go" />
+			</form>
+		</div><!--end #search -->       
+</div>
+
+	<div class="wrap nav">
+ 
+<ul id="menu-main" class=""><li id="menu-item-5348" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-5348"><a href="http://www.builtlean.com/">Home</a></li>
+<li id="menu-item-5349" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5349"><a href="http://www.builtlean.com/marc-perry/">About Marc</a></li>
+<li id="menu-item-5351" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5351"><a href="http://www.builtlean.com/fitness-programs/">The Program</a></li>
+<li id="menu-item-5352" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5352"><a href="http://www.builtlean.com/how-to-get-a-lean-body/">Free E-Book</a></li>
+<li id="menu-item-5353" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5353"><a href="http://www.builtlean.com/success-stories/">Success Stories</a></li>
+<li id="menu-item-5354" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5354"><a href="http://www.builtlean.com/contact-me/">Contact</a></li>
+</ul>                  
+
+<div id="socialbuttons">
+<a href="http://www.facebook.com/builtlean" target="_blank"><img src="http://www.builtlean.com/wp-content/themes/builtlean/images/facebook.png" width="32" height="32"></a>
+<a href="http://www.twitter.com/builtlean" target="_blank"><img src="http://www.builtlean.com/wp-content/themes/builtlean/images/twitter.png" width="32" height="32"></a>
+<a href="http://www.youtube.com/builtleantv" target="_blank"><img src="http://www.builtlean.com/wp-content/themes/builtlean/images/youtube.png" width="32" height="32"></a>
+<a href="http://feeds.feedburner.com/BuiltLean" target="_blank"><img src="http://www.builtlean.com/wp-content/themes/builtlean/images/rss.png" width="32" height="32"></a>
+</div>
+        
+</div><!--end .nav-->
+</div><!--#primary-nav-->
+<div class="wrap">

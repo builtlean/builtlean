@@ -1,0 +1,201 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+    color: #222222;
+    font: 15px/1.5 'Open Sans',Helvetica,Arial,sans-serif;
+}
+
+.clear{clear:both;}
+.mtr{
+	display: block;
+    margin: 0 20px 0 0;}
+p,h1,h2,h3,h4,h5{margin:0; padding:0;}
+
+#wrapper{
+    margin: 0 auto;
+    position: relative;
+    width: 960px;
+}
+
+#header {
+    width: 960px;
+}
+
+#content {
+    margin: 0 auto;
+    position: relative;
+    width: 960px;
+}
+
+.viewcart{
+	border-collapse: collapse;
+    border-radius: 4px 4px 4px 4px;
+    float: left;
+    margin: 20px 0 30px;
+    width: 100%;
+	outline: 1px solid #DDDDDD;
+	}
+
+.tr_bg{
+	background: -moz-linear-gradient(center top , #FFFFFF, #DDDDDD) repeat scroll 0 0 transparent;
+	}
+	
+h1{
+	 font-size: 16px;
+	 margin:0;
+	 padding:0;
+	}	
+	
+.p_txt{margin:0 0 13px 0}	
+
+.th_w{
+	width:10%;	
+	}
+	
+.input_Field{
+	display: block;
+    margin: 0 auto 5px;
+    padding: 4px 4px 4px 6px;
+    text-align: right;
+    width: 30px;
+	 border: 1px solid #DDDDDD;
+    border-radius: 2px 2px 2px 2px;
+	}	
+	
+.updateCart{
+	 font-size: 10px;
+	 text-decoration:none;
+	 color: #1675A2;
+	 margin: 0 0 0 21px;
+	}	
+	
+.updateCart:hover{text-decoration:underline;}	
+
+.border_top{border-top: 1px solid #DDDDDD;}
+
+.billingTable{
+	border-collapse: collapse;
+    float: left;
+    height: auto;
+    outline: 1px solid #DDDDDD;
+    text-align: left;
+    width: 486px;
+	}
+	
+.order_summary{
+	border-collapse: collapse;
+    float: right;
+    height: auto;
+    outline: 1px solid #DDDDDD;
+    text-align: left;
+    width: 435px;
+	}	
+	
+label{
+	float: left;
+    margin: 10px 0 2px 8px;
+    width: 134px;
+	}	
+	
+.error{ color:#ff4800;}	
+	
+.input_box{
+	border: 1px solid #DDDDDD;
+    float: left;
+    height: 20px;
+    margin: 10px 0 0;
+    width: 179px;
+	}
+	
+.small_input{
+	border: 1px solid #DDDDDD;
+    float: left;
+    height: 20px;
+    margin: 10px 1px 0 0;
+    width: 70px;
+	}	
+	
+.medium_input_box{
+	border: 1px solid #DDDDDD;
+    margin: 0 0 0 -17px;
+    padding: 4px 4px 4px 6px;
+    width: 120px;
+	}	
+	
+.select_box{
+	margin: 10px 0 0;
+    padding: 4px 4px 4px 6px;
+    width: 200px;	
+	border: 1px solid #DDDDDD;
+	}	
+	
+.apply{
+	 background: -moz-linear-gradient(center top , #777777, #444444) repeat scroll 0 0 transparent;
+    border: 1px solid #666666;
+    border-radius: 4px 4px 4px 4px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    outline: medium none;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+	padding: 3px 15px;
+	}	
+	
+.apply:hover{
+	background: -moz-linear-gradient(center top , #888888, #555555) repeat scroll 0 0 transparent;
+    color: #FFFFFF;
+    text-decoration: none;	
+	}
+	
+.flt_l{float:left;}	
+.credit{float:left; margin: 0 0 0 10px;}	
+
+.select_box2{
+	margin: 2px 0 0;
+    padding: 4px 4px 4px 6px;
+    width: 200px;	
+	border: 1px solid #DDDDDD;
+	}	
+	
+.select_box3{
+	margin: 2px 0 0;
+    padding: 4px 4px 4px 6px;
+    width: 70px;	
+	border: 1px solid #DDDDDD;
+	}
+	
+.place_holder{
+	 background: -moz-linear-gradient(center top , #777777, #444444) repeat scroll 0 0 transparent;
+    border: 1px solid #666666;
+    border-radius: 4px 4px 4px 4px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    outline: medium none;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+	float:right;
+	padding: 3px 15px;
+	margin:0 0 30px 0;
+	}
+	
+.place_holder:hover{
+	background: -moz-linear-gradient(center top , #888888, #555555) repeat scroll 0 0 transparent;
+    color: #FFFFFF;
+    text-decoration: none;	
+	}	
+	
+
+	
+	
+	

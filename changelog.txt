@@ -1,0 +1,7 @@
+*** Smartblog Changelog ***
+
+2011.07.13 - version 1.0.1
+ * First release!
+ 
+2011.05.31 - version 1.0
+ * First release!
