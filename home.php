@@ -12,7 +12,7 @@ get_header();
         </div>
         
         <div id="logos_container">
-            <img src="<?php bloginfo('template_directory'); ?>/images/logos.jpg" />
+            <a class="bar_btn" href="http://sandbox.builtlean.com/press/"></a>
         </div>
         
 	<div id="wrap_list" class="left">

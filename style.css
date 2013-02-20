@@ -687,14 +687,15 @@ img.alignleft { padding: 0px; margin: 0px 10px 10px 0px; display: inline; }
 	
 	#footer .left_side{
 		float: left;
-		width: 600px; 
+		width: 650px; 
 		font-size: 10px;
 		margin-left: 16px;	
 	}
 	
 	#footer .right_side{
 		float: right;
-		width: 176px;
+		text-align: right;
+		width: 210px;
 		margin-right: 16px;
 		font-size: 10px;	
 	}
@@ -712,6 +713,13 @@ img.alignleft { padding: 0px; margin: 0px 10px 10px 0px; display: inline; }
 	.main-f-menu li:first-child a, .main-f-menu li:first-child a.no-border{
 		border-left: 0px;	
 	}
+	.main-f-menu li:first-child a{
+		font-weight: bold;	
+	}
+		.main-f-menu li:first-child a:hover{
+			text-decoration: none;	
+		}
+	
 	.main-f-menu li a{
 		display: inline;
 		padding: 0 5px;

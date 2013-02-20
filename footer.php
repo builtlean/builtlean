@@ -42,44 +42,58 @@
 			
 			<div class="blocks">
 				<h2>Support</h2>
-				<ul class="menu-company">
-					<li><a href="http://builtlean.zendesk.com">Customer Support Center</a></li>
-					<li><a href="http://www.builtlean.com/terms-of-use/#guarentee">Satisfaction Guarantee</a></li>
-					<li><a href="http://www.builtlean.com/privacy-policy/#emailpreferences">Change Email Preferences</a></li>
-					<li><a href="http://www.builtlean.com/faq/">FAQs</a></li>
-					<li><a href="http://www.builtlean.com/contact/">Contact Us</a></li>		
-				</ul>	
+				<?php
+				wp_nav_menu( array(
+						'theme_location' => 'support-nav',
+						'container' =>false,
+						'echo' => true,
+						'depth' => 0,
+						//'fallback_cb'=>'headermenu',
+						'menu_class' => 'menu-company'
+					)
+				);		
+				?>
 			</div>  
 			
 			<div class="blocks">
 				<h2>Company</h2>
-				<ul class="menu-company">
-					<li><a href="http://www.builtlean.com/about/">About Us</a></li>
-					<li><a href="http://www.builtlean.com/workout-plan/">BuiltLean Program</a></li>
-					<li><a href="http://www.builtlean.com/success-stories/">Success Stories</a></li>
-					<li><a href="http://www.builtlean.com/blog/">Articles & Videos</a></li>
-					<li><a href="http://www.builtlean.com/press/">Press</a></li>		
-				</ul>
+				<?php
+				wp_nav_menu( array(
+						'theme_location' => 'company-nav',
+						'container' =>false,
+						'echo' => true,
+						'depth' => 0,
+						//'fallback_cb'=>'headermenu',
+						'menu_class' => 'menu-company'
+					)
+				);		
+				?>
 			</div>
 			<div style="clear: both; height: 30px;"></div>
 			
-			<ul class="main-f-menu">
-				<li><b>Popular Pages:</b></li>
-				<li><a class="no-border" href="#">Get Lean</a></li>
-				<li><a href="#">Get Ripped</a></li>	
-				<li><a href="#">Workout Plan For Men</a></li>	
-				<li><a href="#">Body Fat Percentage</a></li>	
-				<li><a href="#">Afterburn Effec</a></li>	
-				<li><a href="#">HIIT</a></li>	
-				<li><a href="#">Personal Trainers NYC</a></li>
-			</ul>
+			<?php
+				wp_nav_menu( array(
+						'theme_location' => 'popular-pages-nav',
+						'container' =>false,
+						'echo' => true,
+						'depth' => 0,
+						//'fallback_cb'=>'headermenu',
+						'menu_class' => 'main-f-menu'
+					)
+				);		
+			?>
 			
-			<ul class="main-f-menu">
-				<li><b>Website Usage:</b></li>
-				<li><a class="no-border" href="http://www.builtlean.com/terms-of-use">Terms of Use</a></li>
-				<li><a href="http://www.builtlean.com/privacy-policy/">Privacy Policy</a></li>
-				<li><a href="http://www.builtlean.com/sitemap/">Sitemap</a></li>
-			</ul>			
+			<?php
+				wp_nav_menu( array(
+						'theme_location' => 'website-usage-nav',
+						'container' =>false,
+						'echo' => true,
+						'depth' => 0,
+						//'fallback_cb'=>'headermenu',
+						'menu_class' => 'main-f-menu'
+					)
+				);		
+			?>		
 			 
 			<div style="clear: both; height: 15px;"></div>      
 			<div class="left_side">   
