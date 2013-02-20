@@ -154,9 +154,9 @@ img.framed-thumb {
     #wrap_banner #learn_more {
         position: absolute;
         display: block;
-        top: 250px;
-        left: 505px;
-        width: 120px;
+        top: 305px;
+			left: 505px;
+			width: 125px;
         height: 27px;
     }
     
