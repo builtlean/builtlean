@@ -6,10 +6,6 @@ function register_main_menus() {
 		array(
 			'primary-nav' => __( 'Primary Nav' ),
 			'secondary-nav' => __( 'Secondary Nav' ),
-			'support-nav' => __( 'Support Nav' ),
-			'company-nav' => __( 'Company Nav' ),
-			'popular-pages-nav' => __( 'Popular Pages Nav' ),
-			'website-usage-nav' => __( 'Website Usage Nav' )
 		)
 	);
 }

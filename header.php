@@ -374,7 +374,7 @@ if(isset($_REQUEST['orderId']) && isset($_REQUEST['contactId']) && (is_page('760
 <?php if(!is_page('12970')) { ?>
 <div id="primary-nav">
 <div style="margin:0px auto; width:969px;">
-<div class="logo"><a href="http://www.builtlean.com"><img src="<?php echo get_bloginfo('template_directory');?>/images/logo.png" width="275" height="37" alt="BuiltLean.com" id="logo"/></a></div> 
+<div class="logo"><a href="http://www.builtlean.com"><img src="http://www.builtlean.com/wp-content/themes/builtlean/images/logo.png" width="275" height="37" alt="BuiltLean.com" id="logo"/></a></div> 
           
 <div style="height: 20px; float:right; margin-top:18px; width:280px">
 <div id="cse-search-form" style="width: 100%;">Loading</div>

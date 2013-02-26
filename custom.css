@@ -141,10 +141,10 @@ img.framed-thumb {
     #wrap_banner #buy_now {
         position: absolute;
         display: block;
-      	width: 295px;
-			height: 39px;
-			top: 299px;
-			left: 665px;
+        width: 281px;
+        height: 39px;
+        top: 246px;
+        left: 655px;
         margin: 0;
     }
         #wrap_banner #buy_now:hover {
@@ -154,9 +154,9 @@ img.framed-thumb {
     #wrap_banner #learn_more {
         position: absolute;
         display: block;
-        top: 305px;
-			left: 505px;
-			width: 125px;
+        top: 250px;
+        left: 505px;
+        width: 120px;
         height: 27px;
     }
     

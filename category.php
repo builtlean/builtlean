@@ -25,8 +25,7 @@ wp_nav_menu( array(
 	<?php 
 
 		
-		echo '<h1 class="title_list">'. single_cat_title( '', false ).'</h1>';
-		echo '<p>'. category_description().'</p>';
+		echo '<h1 class="title_list">'.single_cat_title( '', false ).'</h1>';
 		
 
 

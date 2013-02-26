@@ -2,7 +2,6 @@
 <style type="text/css">
 	
 		#breadcrumbs {
-				float: left;
 				background: white;
 				font-family: 'Verdana', 'Geneva', 'Arial';
 		}
@@ -18,10 +17,9 @@
 		.single #breadcrumbs2, .page #breadcrumbs2 {
 			margin-bottom: 10px;
 			padding: 0;
-			/*margin-top: -4px;*/
+			margin-top: -4px;
 			}
 		#breadcrumbs2 {
-			float: left;
 			background: white;
 			font-family: 'Verdana', 'Geneva', 'Arial';
 			font-size: 10px;
@@ -86,31 +84,12 @@ wp_nav_menu( array(
 		<a href="<?php bloginfo('url'); echo'/blog'; ?>"> Blog </a>
 		<a href="<?php echo $path_parts['dirname'], "\n";?>"> <?php echo $path_lvl1[4]; ?> </a>
 		<a href="<?php echo $path_parts['dirname'],"/",$path_parts['filename'], "\n";?>"> <?php echo $lvl2 ?></a>
-		
 	    <?php echo '</div>';
 	}
 	?>
 	
-	<?php 
-	if(is_single() || is_page()) {
-		$customFields = get_post_custom($post->ID);
-		$dr_name = $customFields["review_dr.name"][0];
-		$dr_url = $customFields["review_dr.url"][0];
-		
-		if($dr_name !='' & $dr_url !=''){
-	
-	?>
-		
-	<div class="review_dr"><i>Medically reviewed by <a href="<?php echo $dr_url; ?>"><?php echo $dr_name; ?></a></i></div>
-	
-	<?php 
-		}
-	}
-	
-	echo '<div style="clear: both;"></div>';	
-	
 
-	the_post(); ?>
+	<?php the_post(); ?>
 	
 	<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 			
