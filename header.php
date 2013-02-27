@@ -359,7 +359,15 @@ if(isset($_REQUEST['orderId']) && isset($_REQUEST['contactId']) && (is_page('760
 
 </head>
 
-<body <?php body_class(); ?>">
+<body <?php body_class(); ?>>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 
 <div id="fb-root"></div>
 <script>
@@ -374,7 +382,7 @@ if(isset($_REQUEST['orderId']) && isset($_REQUEST['contactId']) && (is_page('760
 <?php if(!is_page('12970')) { ?>
 <div id="primary-nav">
 <div style="margin:0px auto; width:969px;">
-<div class="logo"><a href="http://www.builtlean.com"><img src="http://www.builtlean.com/wp-content/themes/builtlean/images/logo.png" width="275" height="37" alt="BuiltLean.com" id="logo"/></a></div> 
+<div class="logo"><a href="http://www.builtlean.com"><img src="<?php echo get_bloginfo('template_directory');?>/images/0logo.png" width="256" height="34" alt="BuiltLean.com" id="logo"/></a></div> 
           
 <div style="height: 20px; float:right; margin-top:18px; width:280px">
 <div id="cse-search-form" style="width: 100%;">Loading</div>
@@ -455,10 +463,11 @@ if(is_single() || is_category() || is_page('blog')){
 
 
 <div id="socialbuttons">
-<a href="http://www.facebook.com/builtlean" target="_blank"><img src="http://www.builtlean.com/wp-content/themes/builtlean/images/facebook.png" width="32" height="32"></a>
-<a href="http://www.twitter.com/builtlean" target="_blank"><img src="http://www.builtlean.com/wp-content/themes/builtlean/images/twitter.png" width="32" height="32"></a>
-<a href="http://www.youtube.com/builtleantv" target="_blank"><img src="http://www.builtlean.com/wp-content/themes/builtlean/images/youtube.png" width="32" height="32"></a>
-<a href="http://feeds.feedburner.com/BuiltLean" target="_blank"><img src="http://www.builtlean.com/wp-content/themes/builtlean/images/rss.png" width="32" height="32"></a>
+	<div class="fb-like fb-from-header" data-href="https://www.facebook.com/builtlean" data-send="false" data-layout="button_count" data-width="150" data-show-faces="true"></div>
+	<a href="http://www.facebook.com/builtlean" target="_blank"><img src="http://www.builtlean.com/wp-content/themes/builtlean/images/facebook.png" width="32" height="32"></a>
+	<a href="http://www.twitter.com/builtlean" target="_blank"><img src="http://www.builtlean.com/wp-content/themes/builtlean/images/twitter.png" width="32" height="32"></a>
+	<a href="http://www.youtube.com/builtleantv" target="_blank"><img src="http://www.builtlean.com/wp-content/themes/builtlean/images/youtube.png" width="32" height="32"></a>
+	<a href="http://feeds.feedburner.com/BuiltLean" target="_blank"><img src="http://www.builtlean.com/wp-content/themes/builtlean/images/rss.png" width="32" height="32"></a>
 </div>
         
 </div><!--end .nav-->

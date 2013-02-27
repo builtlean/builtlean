@@ -3,109 +3,120 @@
 </div><!--end .wrap-->
 
 <div class="clear"></div>
-
-	<div id="footer">
-		
-		<div class="wrap">
+	<?php
+	if (is_home() ) { 
+		$display_logos='display_none ';
+		}
+	?>
 	
-		
-
-<div style=" width:150px; float:left; clear:left; margin-right:15px;">
-
-<h2>Navigation</h2>
-<ul>
-<li><a href="http://www.builtlean.com">Home</a></li>
-<li> <a href="http://www.builtlean.com/about/">About</a></li> 
-<li> <a href="http://www.builtlean.com/fitness-programs/" rel="nofollow">Fitness Programs</a></li> 
-<li> <a href="http://www.builtlean.com/how-to-get-a-lean-body/" rel="nofollow">Free E-Book</a></li>
-<li> <a href="http://www.builtlean.com/success-stories/">Success Stories</a></li> 
-<li> <a href="http://www.builtlean.com/affiliate-program">Affiliate Program</a></li> 
-<li> <a href="http://www.builtlean.com/advertise/">Advertise</a></li> 
-<li> <a href="http://www.builtlean.com/contact/">Contact</a></li>
-</ul>
-</div>
-
-<div style=" width:230px; float:left; margin-right:20px; ">
-
-<h2>Most Searched </h2>
-<ul>
-<li><a href="http://www.builtlean.com/how-to-get-a-lean-body/">How to Get Lean</a></li>
-<li><a href="http://www.builtlean.com/2011/05/11/how-to-get-ripped-and-cut/">How to Get Ripped</a></li>
-<li><a href="http://www.builtlean.com/2010/08/03/ideal-body-fat-percentage-chart/">Body Fat Percentage Chart</a></li>
-<li><a href="http://www.builtlean.com/2010/05/04/ideal-body-weight-formula-how-to-calculate-your-ideal-weight/">Ideal Body Weight Formula</a></li>
-<li><a href="http://www.builtlean.com/2010/06/04/high-intensity-interval-training-hiit-best-cardio-to-burn-fat/">High Intensity Interval Training</a> </li>
-<li><a href="http://www.builtlean.com/2011/06/29/afterburn-effect-of-exercise-qa-with-dr-christopher-scott-phd/">Afterburn Effect</a> </li>
-<li><a href="http://www.builtlean.com/2011/01/18/how-many-calories-should-you-eat-to-lose-weight/">Calories To Lose Weight</a> </li>
-<li><a href="http://www.builtlean.com/best-personal-trainers-nyc.html">Best Personal Trainers NYC</a> </li>
-
-</ul>
-</div>
-
-<div style=" width:230px; float:left; margin-right:25px;">
-
-<h2>Press Mentions</h2>
-
-<div class="press-item">
-	<a href="http://www.builtlean.com/press/" target="_blank" rel="nofollow"><img src="http://www.builtlean.com/wp-content/themes/builtlean/images/press_logos/mens_health.png" width="130" height="60" alt="" /></a>
-</div>
-
-<div class="press-item">
-	<a href="http://www.builtlean.com/press/" target="_blank" rel="nofollow"><img src="http://www.builtlean.com/wp-content/themes/builtlean/images/press_logos/mens_fitness.png" width="130" height="60" alt="" /></a>
-</div>
-
-<div class="press-item">
-	<a href="http://www.builtlean.com/press/" target="_blank" rel="nofollow"><img src="http://www.builtlean.com/wp-content/themes/builtlean/images/press_logos/shape.png" width="130" height="60" alt="" /></a>
-</div>
-
-<div class="press-item">
-	<a href="http://www.builtlean.com/press/" target="_blank" rel="nofollow"><img src="http://www.builtlean.com/wp-content/themes/builtlean/images/press_logos/bloomberg.png" width="130" height="60" alt="" /></a>
-</div>
-
-</div>
-
-
-
-
-<div style=" width:245px; float:left;margin-bottom:40px; position:relative;">
-<h2>Copyright & Usage</h2>
-
-<ul style="margin-right:15px; width:85px;">
-<li> <a href="http://www.builtlean.com/sitemap/">Sitemap</a></li>
-<li> <a href="http://www.builtlean.com/terms-of-use">Terms of Use</a></li>
-<li><a href="http://www.builtlean.com/privacy-policy/">Privacy Policy</a></li>
-</ul>
-
-<div style="float:right; margin:-81px 0 10px 105px;"> 
-<!-- Begin Official Verisign Seal --><script type="text/javascript" src="https://seal.verisign.com/getseal?host_name=www.builtlean.com&amp;size=M&amp;use_flash=NO&amp;use_transparent=YES&amp;lang=en"></script><a title="Built Lean BBB Business Review" href="http://www.bbb.org/new-york-city/business-reviews/personal-trainers/builtlean-in-new-york-ny-128703/#bbbonlineclick" target="_blank"><img alt="bbb logo without click Free E Book" style="border: 0;" src="http://www.builtlean.com/wp-content/uploads/bbb-logo-without-click.png" title="Free E Book" /></a><!-- End Official BBB Seal -->
-</div>
-
-<p class="note">This website is for informational purposes only and is no way intended as medical counseling or medical advice.  Results may vary. </p>
-
-<p style="float:left">Copyright &copy; 2013 Elite Training Partners LLC.  All Rights Reserved.</p>
-
-
-</div>        
-                
+	 <div id="<?php echo $display_logos; ?>logos_container" class="margin15auto">
+			<div class="<?php echo $display_logos; ?>press_ribbon"></div>
+			<div class="<?php echo $display_logos; ?>bar_btn_container">
+				<div class="<?php echo $display_logos; ?>ribbon"></div>
+					<a class="<?php echo $display_logos; ?>bar_btn" href="http://sandbox.builtlean.com/press/"></a>
+				 </div>
+            <div class="clear"></div>
+        </div>
+	<div id="footer">
+		<div id="footer-content">
+			<div class="blocks no-padd">
+				<h2>Join our email list</h2>
+				<p>Join our email list for exclusive offers and weekly updates</p>
+				<form action="https://builtlean.infusionsoft.com/AddForms/processFormSecure.jsp" target="_blank" onsubmit="_gaq.push(['_setCustomVar', 1, 'newsletter sign up', 'top right opt-in', 1]);_gaq.push(['_trackEvent', 'newsletter', 'sign up', 'top right opt-in']);" method="POST">
+					<input type="hidden" name="infusion_xid" id="infusion_xid" value="7b5c4c539110daaf295e6bf49596ccc0">
+	          	<input type="hidden" name="infusion_type" id="infusion_type" value="CustomFormWeb">
+	           	<input type="hidden" name="infusion_name" id="infusion_name" value="New Lead">				
+					<input type="email" class="mail-list" name="Contact0Email" placeholder="Enter Your Email...">
+					<input type="submit" name="Submit" value="Submit" class="mail-list-btn">
+					<input type="hidden" name="Contact0_GaContent" value="-">
+		         <input type="hidden" name="Contact0_GaSource" value="(direct)">
+		         <input type="hidden" name="Contact0_GaMedium" value="(none)">
+		         <input type="hidden" name="Contact0_GaTerm" value="-">
+		         <input type="hidden" name="Contact0_GaCampaign" value="(direct)">
+		         <input type="hidden" name="Contact0_GaReferurl" value="http://sandbox.builtlean.com/">
+		         <input type="hidden" name="inf_field_LeadSourceName" value="Web - Direct">
+		         <input type="hidden" name="LeadSource" value="Web - Direct">
+		         <input type="hidden" name="LeadSource0Vendor" value="">
+		         <input type="hidden" name="LeadSource0Medium" value="">
+		         <input type="hidden" name="LeadSource0Message" value="">			
+				</form>
 			</div>
 			
-			<div class="clear"></div>
+			<div class="blocks">
+				<h2>Connect with us</h2>
+				<p>Follow Us On:</p>
+				<div id="socialbuttons" style="float: left;">
+					<a href="http://www.facebook.com/builtlean" target="_blank"><img src="http://www.builtlean.com/wp-content/themes/builtlean/images/facebook.png" width="32" height="32"></a>
+					<a href="http://www.twitter.com/builtlean" target="_blank"><img src="http://www.builtlean.com/wp-content/themes/builtlean/images/twitter.png" width="32" height="32"></a>
+					<a href="http://www.youtube.com/builtleantv" target="_blank"><img src="http://www.builtlean.com/wp-content/themes/builtlean/images/youtube.png" width="32" height="32"></a>
+				</div>	
+			</div>
 			
-		</div><!--end .wrap-->
-		
-		<div class="clear"></div>					
-					
-		<div class="copyright">
-		
-			<div class="wrap">
+			<div class="blocks">
+				<h2>Support</h2>
+				<?php
+				wp_nav_menu( array(
+						'theme_location' => 'support-nav',
+						'container' =>false,
+						'echo' => true,
+						'depth' => 0,
+						//'fallback_cb'=>'headermenu',
+						'menu_class' => 'menu-company'
+					)
+				);		
+				?>
+			</div>  
 			
+			<div class="blocks">
+				<h2>Company</h2>
+				<?php
+				wp_nav_menu( array(
+						'theme_location' => 'company-nav',
+						'container' =>false,
+						'echo' => true,
+						'depth' => 0,
+						//'fallback_cb'=>'headermenu',
+						'menu_class' => 'menu-company'
+					)
+				);		
+				?>
+			</div>
+			<div style="clear: both; height: 30px;"></div>
 			
-			&nbsp; 
+			<?php
+				wp_nav_menu( array(
+						'theme_location' => 'popular-pages-nav',
+						'container' =>false,
+						'echo' => true,
+						'depth' => 0,
+						//'fallback_cb'=>'headermenu',
+						'menu_class' => 'main-f-menu'
+					)
+				);		
+			?>
 			
+			<?php
+				wp_nav_menu( array(
+						'theme_location' => 'website-usage-nav',
+						'container' =>false,
+						'echo' => true,
+						'depth' => 0,
+						//'fallback_cb'=>'headermenu',
+						'menu_class' => 'main-f-menu'
+					)
+				);		
+			?>		
+			 
+			<div style="clear: both; height: 15px;"></div>      
+			<div class="left_side">   
+				This website is for informational purposes only and is no way intended as medical counseling or medical advice. Results may vary.   
+			</div>
 			
-			</div><!--end .wrap-->
-			
-		</div><!--end .copyright-->
-													
+			<div class="right_side">
+				&copy; <?php echo date('Y');?> BuiltLean  |  All rights reserved.
+			</div>
+			<div style="clear: both;"></div>											
+		</div>
 	</div><!--end #footer -->
 
 <?php wp_footer(); ?>
