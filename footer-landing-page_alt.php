@@ -54,7 +54,7 @@
 
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-4567298-5']);
-  _gaq.push(['_setDomainName', 'none']);
+  _gaq.push(['_setDomainName', 'builtlean.com']);
   _gaq.push(['_setAllowLinker', true]);
   _gaq.push(['_trackPageview']);
 
