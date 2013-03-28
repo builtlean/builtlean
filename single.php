@@ -143,13 +143,10 @@ wp_nav_menu( array(
 		
 		</div> <!--end .entry-->
         
-
 		
 		<div class="clear"></div>
         
-               
-          
-		
+         
 
 	</div> <!--end #post-->
 <div style="clear:both; margin-left: 119px; margin-bottom: -3px;">
@@ -167,7 +164,6 @@ wp_nav_menu( array(
 
 
 <div class="clear"></div>
-
 <?php if ( ! comments_open() ) : ?>
 <!-- WE JUST HIDE IT FOR LATER USE :) -->
 <div class="comments-closed" style="display:none">
@@ -189,10 +185,10 @@ wp_nav_menu( array(
 <script type="text/javascript">
 		jQuery(document).ready(function(){
 			
-				var singleValues = jQuery("#menu-item-13091 a").html();
-				if (singleValues == 'Blog'){
-					jQuery("#menu-item-13091").addClass('menu_item_hovered_blog');
-					jQuery("#menu-item-13091 a").css('font-weight','bold');
+				var singleValues = jQuery("li.blog a").html();
+				if (singleValues == 'Articles &amp; Videos'){
+					jQuery("li.blog").addClass('menu_item_hovered_blog');
+					jQuery("li.blog").css('font-weight','bold');
 					}
 		
 			});

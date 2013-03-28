@@ -20,8 +20,8 @@ $ret=array('Id','ProductName','ProductPrice','ShortDescription');
 $products = $app->dsFind('Product',1,0,'Id',$productid,$ret);
 $product=$products[0];
 $_SESSION['product']=$product;
-
 ?>
+
 <div class="onecolumn">
 	
 	<div id="content" class="<?php if(get_option('smartblog_homepage_layout') == 'Content | Sidebar') { echo('left'); } else { echo('right'); } ?>">

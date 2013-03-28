@@ -75,6 +75,7 @@ function my_twentyten_excerpt_length( $length ) {
 add_filter( 'excerpt_length', 'my_twentyten_excerpt_length' );
 */
 
+
 function get_excerpt(){
 
 		$excerpt = get_the_excerpt();
@@ -112,6 +113,7 @@ add_theme_support('post-thumbnails');
 set_post_thumbnail_size( 300, 150, true );
 add_image_size( 'post-home_thumb', 195, 160, true );
 add_image_size( 'square_thumb', 150, 150, true );
+add_image_size( 'tab-thumb', 56, 56, true );
 //add_image_size( 'small-home-thumb', 80, 55, true );
 
 

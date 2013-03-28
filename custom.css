@@ -139,6 +139,8 @@ filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=
     position: relative;
 }
     #wrap_banner #buy_now {
+        opacity:0;
+     
         position: absolute;
         display: block;
       	width: 295px;
@@ -152,12 +154,15 @@ filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=
         }
         
     #wrap_banner #learn_more {
+        opacity:0;
         position: absolute;
+ 
         display: block;
         top: 246px;
 		left: 505px;
 		width: 125px;
         height: 27px;
+        
     }
     
 #logos_container {

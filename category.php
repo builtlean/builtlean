@@ -52,7 +52,7 @@ wp_nav_menu( array(
 	</div><!--end #featured-->
 	
 	<?php if(get_option('smartblog_home_content_ad_enable') == 'on') { ?>
-
+		
 		<div class="home-content-ad">
 			<div class="ad-code">
 				<?php echo get_option('smartblog_home_content_ad_code'); ?>

@@ -2,8 +2,8 @@
 
 $themename = "Smartblog";
 $shortname = "smartblog";
-//$admincpMainTabs = array('general','navigation','layout','ad','seo','integration','doc');
-$admincpMainTabs = array('general','layout');
+
+$admincpMainTabs = array('general','navigation','layout','ad','seo','integration','doc');
 
 $cats_array = get_categories('hide_empty=0');
 $pages_array = get_pages('hide_empty=0');
@@ -44,12 +44,12 @@ $options = array (
 		array( "name" => "general-1",
 			   "type" => "subcontent-start",),
 			   
-		/*	array( "name" => "Theme Stylesheet",
+			array( "name" => "Theme Stylesheet",
 				   "id" => $shortname."_theme_stylesheet",
 				   "type" => "select",
 				   "std" => "default.css",
 				   "options" => array("default.css", "green.css", "red.css", "brown.css", "black.css", "pink.css"),
-				   "desc" => "Select your themes alternative color scheme.",),	 */
+				   "desc" => "Select your themes alternative color scheme.",),	 
 			   
 			array( "name" => "Logo",
 				   "id" => $shortname."_logo",
@@ -57,13 +57,13 @@ $options = array (
 				   "std" => get_bloginfo('template_directory') . '/images/logo.png',
 				   "desc" => "Upload a logo for your theme, or specify the image address of your online logo. (http://yoursite.com/logo.png)."
 			),
-			
-			/* array( "name" => "Enable Text Logo",
-							   "id" => $shortname."_text_logo_enable",
-							   "type" => "checkbox",
-							   "std" => "false",
-							   "desc" => "Enable if you want Blog Title and Tagline to be text-based. Setup title/tagline in WP -> Settings -> General."),			
-*/
+
+			array( "name" => "Enable Text Logo",
+                   "id" => $shortname."_text_logo_enable",
+                   "type" => "checkbox",
+                   "std" => "false",
+                   "desc" => "Enable if you want Blog Title and Tagline to be text-based. Setup title/tagline in WP -> Settings -> General."),			
+
 			array( "name" => "Favicon",
 				   "id" => $shortname."_favicon",
 				   "type" => "upload",
@@ -73,11 +73,11 @@ $options = array (
 
 			array( "type" => "clearfix",),
 			
-		  /*array( "name" => "Custom CSS",
+			array( "name" => "Custom CSS",
 				   "id" => $shortname."_custom_css",
 				   "type" => "textarea",
 				   "std" => "",
-				   "desc" => "Quickly add some CSS to your theme by adding it to this block.",),		*/	
+				   "desc" => "Quickly add some CSS to your theme by adding it to this block.",),		
 				   
 			array( "name" => "Select Featured Category",
 				   "id" => $shortname."_featured_cat_articles",
@@ -98,7 +98,7 @@ $options = array (
 			"type" => "contenttab-wrapend",),
 
 //-------------------------------------------------------------------------------------//
-/*
+
 	array( "name" => "nav-navigation",
 		   "type" => "contenttab-wrapstart",),
 
@@ -216,8 +216,8 @@ $options = array (
 			   "type" => "subcontent-end",),
 
 	array( "name" => "nav-navigation",
-		   "type" => "contenttab-wrapend",),*/
-	
+		   "type" => "contenttab-wrapend",),
+
 //-------------------------------------------------------------------------------------//
 
 	array( "name" => "nav-layout",
@@ -251,7 +251,7 @@ $options = array (
 				   "std" => "Layout #1",
 				   "options" => array("Layout #1", "Layout #2", "Layout #3"),
 				   "desc" => "desc.",),	   
-			
+
 			array( "name" => "Number of featured posts to show (Layout #1)",
 				   "id" => $shortname."_featured_post_num",
 				   "type" => "text",
@@ -315,7 +315,7 @@ $options = array (
 
 
 //-------------------------------------------------------------------------------------//
-  /*array( "name" => "nav-seo",
+	array( "name" => "nav-seo",
 		   "type" => "contenttab-wrapstart",),
 
 		array( "type" => "subnavtab-start",),
@@ -502,7 +502,7 @@ $options = array (
 
 //-------------------------------------------------------------------------------------//
 
-	/*array( "name" => "nav-integration",
+	array( "name" => "nav-integration",
 		   "type" => "contenttab-wrapstart",),
 
 		array( "type" => "subnavtab-start",),
@@ -659,7 +659,7 @@ $options = array (
 
 	array( "name" => "nav-support",
 		   "type" => "contenttab-wrapend",),
-*/
+
 //-------------------------------------------------------------------------------------//
 
 ); 

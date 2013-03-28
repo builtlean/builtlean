@@ -1,7 +1,7 @@
 <?php 
 
 if (function_exists('create_initial_post_types')) create_initial_post_types(); //fix for wp 3.0 beta 1
-if (function_exists('add_custom_background')) add_custom_background();
+// if (function_exists('add_custom_background')) add_custom_background();
 if (function_exists('add_post_type_support')) add_post_type_support( 'page', 'excerpt' );
 
 add_filter('body_class','tj_browser_body_class');

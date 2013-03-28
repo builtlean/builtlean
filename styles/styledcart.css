@@ -1,4 +1,4 @@
-a.backlink {
+﻿a.backlink {
     float: left;
     margin-top: 10px;
 }
@@ -257,7 +257,7 @@ h3 {
     left: 0;
     width: 173px;
     height: 173px;
-    background-image: url(../images/preview-banner.png);
+    background-image: url("../images/preview-banner.png");
     background-repeat: no-repeat;
     z-index: 1;
 }
@@ -334,3 +334,4 @@ div.author{
 .refresh-thumbnail-link {
     cursor: pointer;
 }
+

@@ -10,7 +10,7 @@
 <link rel="alternate" type="application/atom+xml" title="BuiltLean.com Atom Feed" href="http://www.builtlean.com/feed/atom/" />
 <link rel="pingback" href="http://www.builtlean.com/xmlrpc.php" />
 <?php wp_head(); ?>
-<?php if(is_page('12970') == 1) { 
+<?php if(is_page('12623') == 1) { 
 	$temp_uri=get_template_directory_uri();
 	$temp_uri=str_replace('cdn','www',$temp_uri);
 	?>
@@ -221,7 +221,7 @@ if(isset($_REQUEST['orderId']) && isset($_REQUEST['contactId']) && (is_page('760
 </head>
 
 <body <?php body_class(); ?>>
-<?php if(!is_page('12970')) { ?>
+<?php if(!is_page('12623')) { ?>
 <div id="primary-nav" style="height:65px">
 <div style="margin:20px auto; width:969px;">
  <div><img src="http://www.builtlean.com/wp-content/themes/builtlean/images/logo_landingpage.jpg" width="192" height="26" alt="BuiltLean.com"/></div> 

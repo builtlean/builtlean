@@ -5,7 +5,11 @@
 <title><?php bloginfo('name'); ?> <?php wp_title(' - ', true, 'left'); ?></title>
 
 <link rel="profile" href="http://gmpg.org/xfn/11" />
-<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('template_directory'); ?>/style.css" />
+
+<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo ('template_url');?>/style.css" />
+<!--[if IE 7]>
+<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo ('template_url');?>/ie7.css" />
+<![endif]-->
 <link rel="alternate" type="application/rss+xml" title="BuiltLean.com RSS Feed" href="http://www.builtlean.com/feed/" />
 <link rel="alternate" type="application/atom+xml" title="BuiltLean.com Atom Feed" href="http://www.builtlean.com/feed/atom/" />
 <link rel="pingback" href="http://www.builtlean.com/xmlrpc.php" />
@@ -15,9 +19,59 @@
 <link href="<?php bloginfo('template_directory'); ?>/styles/style.css" rel="stylesheet" type="text/css" />
 <?php } ?>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-<?php wp_head(); 
 
+<script type="text/javascript">
+		jQuery(document).ready(function(){
+			
+				jQuery('.sub-menu1 ul').removeClass('sub-menu1').addClass('sub-menu2');
+			
+            jQuery('#menu-blog li').hover(function() {
+				jQuery(this).addClass('menu_item_hovered2');
+				jQuery(this).children('ul').slideDown(100);
+			}, function() {
+				jQuery(this).removeClass('menu_item_hovered2');
+				jQuery(this).children('ul').slideUp(200);
+			});
+			
+			
+            jQuery('#menu-blog-2 li').hover(function() {
+				jQuery(this).addClass('menu_item_hovered2');
+				jQuery(this).children('ul').slideDown(100);
+			}, function() {
+				jQuery(this).removeClass('menu_item_hovered2');
+				jQuery(this).children('ul').slideUp(200);
+			});
+			
+			
+            jQuery('#menu-hover li').hover(function() {
+				var selected = jQuery(this).children("a").text();
+				/*alert(selected);*/
+				if (selected == 'Blog'){
+					jQuery(this).addClass('menu_item_hovered3');
+					}
+				else {
+					jQuery(this).addClass('menu_item_hovered4');
+					}
+				jQuery(this).children('#menu-hover li > ul.sub-menu1').slideDown(100);
+			}, function() {
+				jQuery(this).removeClass('menu_item_hovered4');
+				jQuery(this).removeClass('menu_item_hovered3');
+				jQuery(this).children('#menu-hover li > ul.sub-menu1').slideUp(200);
+			});
+			
+		});
 
+		
+</script>
+
+<?php wp_head();?> 
+<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery-scrolltofixed-min.js"></script>
+<script>
+jQuery(document).ready(function($) {
+    $('#stickyadd').scrollToFixed({ marginTop: 0 });
+});
+</script>
+<?php
 if(is_single() || is_category()){
 	$category = get_the_category($post->ID); 
 	$checkCat = $category[0]->cat_name;
@@ -44,6 +98,12 @@ if(is_single() || is_category()){
 		padding-left: 3px;
 		}
 	</style>
+	<script type="text/javascript">
+		jQuery(document).ready( function(){
+			jQuery('#outbrain_container_0_stripBox .strip-like').html('FEATURED ARTICLES + RELATED POSTS');
+			//alert('aaa');
+		});
+	</script>
 	<?php
 }
 }
@@ -114,49 +174,6 @@ if(is_single() || is_category()){
 
 
 
-<script type="text/javascript">
-		jQuery(document).ready(function(){
-			
-				jQuery('.sub-menu1 ul').removeClass('sub-menu1').addClass('sub-menu2');
-			
-            jQuery('#menu-blog li').hover(function() {
-				jQuery(this).addClass('menu_item_hovered2');
-				jQuery(this).children('ul').slideDown(100);
-			}, function() {
-				jQuery(this).removeClass('menu_item_hovered2');
-				jQuery(this).children('ul').slideUp(200);
-			});
-			
-			
-            jQuery('#menu-blog-2 li').hover(function() {
-				jQuery(this).addClass('menu_item_hovered2');
-				jQuery(this).children('ul').slideDown(100);
-			}, function() {
-				jQuery(this).removeClass('menu_item_hovered2');
-				jQuery(this).children('ul').slideUp(200);
-			});
-			
-			
-            jQuery('#menu-hover li').hover(function() {
-				var selected = jQuery(this).children("a").text();
-				/*alert(selected);*/
-				if (selected == 'Blog'){
-					jQuery(this).addClass('menu_item_hovered3');
-					}
-				else {
-					jQuery(this).addClass('menu_item_hovered4');
-					}
-				jQuery(this).children('#menu-hover li > ul.sub-menu1').slideDown(100);
-			}, function() {
-				jQuery(this).removeClass('menu_item_hovered4');
-				jQuery(this).removeClass('menu_item_hovered3');
-				jQuery(this).children('#menu-hover li > ul.sub-menu1').slideUp(200);
-			});
-			
-		});
-
-		
-</script>
 <?php if(is_page('12970') == 1) { ?>
 <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.10.0/jquery.validate.js"></script>
 <script type="text/javascript" src="<?php echo get_template_directory_uri();?>/js/priceformat.js"></script>
@@ -356,6 +373,34 @@ if(isset($_REQUEST['orderId']) && isset($_REQUEST['contactId']) && (is_page('760
 
 </script>
 <?php } ?>
+<link rel="icon" href="favicon.icooo" type="image/x-icon" />
+
+
+<!-- Google DFP -->
+<script type='text/javascript'>
+	var googletag = googletag || {};
+		googletag.cmd = googletag.cmd || [];
+		(function() {
+		var gads = document.createElement('script');
+		gads.async = true;
+		gads.type = 'text/javascript';
+		var useSSL = 'https:' == document.location.protocol;
+		gads.src = (useSSL ? 'https:' : 'http:') + 
+		'//www.googletagservices.com/tag/js/gpt.js';
+		var node = document.getElementsByTagName('script')[0];
+		node.parentNode.insertBefore(gads, node);
+	})();
+</script>
+
+<script type='text/javascript'>
+	googletag.cmd.push(function() {
+		googletag.defineSlot('/29676084/BuiltLean-Half-Page', [300, 600], 'div-gpt-ad-1363655684868-0').addService(googletag.pubads());
+		googletag.pubads().enableSingleRequest();
+		googletag.enableServices();
+	});
+</script>
+<!-- END Google DFP -->
+
 
 </head>
 
@@ -382,8 +427,8 @@ if(isset($_REQUEST['orderId']) && isset($_REQUEST['contactId']) && (is_page('760
 <?php if(!is_page('12970')) { ?>
 <div id="primary-nav">
 <div style="margin:0px auto; width:969px;">
-<div class="logo"><a href="http://www.builtlean.com"><img src="<?php echo get_bloginfo('template_directory');?>/images/0logo.png" width="256" height="34" alt="BuiltLean.com" id="logo"/></a></div> 
-          
+<div class="logo"><a href="http://www.builtlean.com"><img src="<?php echo get_option('smartblog_logo'); ?>" alt="BuiltLean.com" id="logo"/></a></div> 
+  
 <div style="height: 20px; float:right; margin-top:18px; width:280px">
 <div id="cse-search-form" style="width: 100%;">Loading</div>
 <script src="http://www.google.com/jsapi" type="text/javascript"></script>

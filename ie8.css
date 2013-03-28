@@ -1,0 +1,62 @@
+﻿#subscribe_ribbon { 
+background: url(images/banner_Chris.png) no-repeat top center;
+    height: 117px;
+    position: relative;
+}
+ #ribbon_text_input {
+        position: absolute;
+        left: 505px;
+        top: 30px;
+        border: 2px solid #ECECEC;
+        width: 180px;
+        padding: 9px 20px 9px 10px;
+        border-radius: 5px;
+        -moz-border-radius: 5p;
+        -webkit-border-radius: 5px;
+        background: url(images/subscribe_envelope.jpg) #fff no-repeat 188px center;
+    }
+        #ribbon_text_input:focus {
+           /* border: 1px solid #1f1f1f;*/
+        }
+    
+    #ribbon_submit_input {
+       position: absolute;
+left: 720px;
+top: 30px;
+border-radius: 5px;
+-moz-border-radius: 5p;
+-webkit-border-radius: 5px;
+text-transform: uppercase;
+color: white;
+font-weight: bold;
+text-shadow: 0px 1px 5px #444;
+cursor: pointer;
+line-height: 19px;
+padding: 9px 20px 9px 19px;
+border: 1px solid #c20001;
+border-top: 1px solid #D31515;
+background-color: #c20001;
+background-image: -webkit-gradient(linear,left top,left bottom,from(#D31515),to(#c20001));
+background-image: -webkit-linear-gradient(top,#D31515,#c20001);
+background-image: -moz-linear-gradient(top,#D31515,#c20001);
+background-image: -ms-linear-gradient(top,#D31515,#c20001);
+background-image: -o-linear-gradient(top,#D31515,#c20001);
+background-image: linear-gradient(to bottom,#D31515,#c20001);
+-webkit-box-shadow: inset 0 1px 0 rgba(255, 207, 189, 0.6);
+box-shadow: inset 0 1px 0 rgba(255, 207, 189, 0.6);
+-moz-box-shadow: inset 0 1px 0 rgba(255, 207, 189, 0.6);
+filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#D31515', endColorstr='#c20001');
+-ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#D31515', endColorstr='#c20001')";
+}
+        
+#ribbon_submit_input:hover {
+            background: #c20001;
+        }
+        #wrap_banner #learn_more {
+position: absolute;
+display: block;
+top: 246px;
+left: 505px;
+width: 125px;
+height: 27px;
+}

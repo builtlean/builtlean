@@ -13,7 +13,7 @@
 			<div class="<?php echo $display_logos; ?>press_ribbon"></div>
 			<div class="<?php echo $display_logos; ?>bar_btn_container">
 				<div class="<?php echo $display_logos; ?>ribbon"></div>
-					<a class="<?php echo $display_logos; ?>bar_btn" href="http://sandbox.builtlean.com/press/"></a>
+					<a class="<?php echo $display_logos; ?>bar_btn" href="<?php bloginfo('url'); ?>/press/"></a>
 				 </div>
             <div class="clear"></div>
         </div>
@@ -33,7 +33,7 @@
 		         <input type="hidden" name="Contact0_GaMedium" value="(none)">
 		         <input type="hidden" name="Contact0_GaTerm" value="-">
 		         <input type="hidden" name="Contact0_GaCampaign" value="(direct)">
-		         <input type="hidden" name="Contact0_GaReferurl" value="http://sandbox.builtlean.com/">
+		         <input type="hidden" name="Contact0_GaReferurl" value="<?php bloginfo('url'); ?>">
 		         <input type="hidden" name="inf_field_LeadSourceName" value="Web - Direct">
 		         <input type="hidden" name="LeadSource" value="Web - Direct">
 		         <input type="hidden" name="LeadSource0Vendor" value="">

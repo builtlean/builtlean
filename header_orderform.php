@@ -5,9 +5,9 @@
 <title>Fitness Tips to Get Lean, Toned, &amp; Lose Fat | BuiltLean.com</title>
 
 <link rel="profile" href="http://gmpg.org/xfn/11" />
-<link rel="stylesheet" type="text/css" media="all" href="<?php echo get_template_url_uri();?>/styles/styledcart.css" />
+<link rel="stylesheet" type="text/css" media="all" href="<?php echo get_template_directory_uri();?>/styles/styledcart.css" />
 <script type="text/javascript">(function() {
-                        var styleArray = ["<?php echo get_template_url_uri();?>/styles/styledcart.css"];
+                        var styleArray = ["<?php echo get_template_directory_uri();?>/styles/styledcart.css"];
                         if (window.Infusion) {
                             Infusion.stylesLoaded(styleArray);
                         } else if (window.InfusionStyles) {
@@ -17,14 +17,14 @@
                         }
 
                     })();</script>
-<link type="text/css" rel="stylesheet" href="<?php echo get_template_url_uri();?>/styles/cssSnippetjsp.css" />
-<link type="text/css" rel="stylesheet" href="<?php echo get_template_url_uri();?>/styles/cssSnippet1jsp.css" />
-<script type="text/javascript" src="<?php echo get_template_url_uri();?>/js/sink_jq.jsp"></script>
-<script type="text/javascript" src="<?php echo get_template_url_uri();?>/js/sink_js.jsp"></script>
-<link type="text/css" rel="stylesheet" media="all" href="<?php echo get_template_url_uri();?>/styles/lightbox.css" id="lazy-loaded-1363052028412" />
-<script src="<?php echo get_template_url_uri();?>/js/jquery-qtip-1.0.0-rc3.js" type="text/javascript"></script>
-<script src="<?php echo get_template_url_uri();?>/js/orderForms.js" type="text/javascript"></script>
-<script src="<?php echo get_template_url_uri();?>/js/checkoutHiddenFields.js" type="text/javascript"></script>
+<link type="text/css" rel="stylesheet" href="<?php echo get_template_directory_uri();?>/styles/cssSnippetjsp.css" />
+<link type="text/css" rel="stylesheet" href="<?php echo get_template_directory_uri();?>/styles/cssSnippet1jsp.css" />
+<script type="text/javascript" src="<?php echo get_template_directory_uri();?>/js/sink_jq.jsp"></script>
+<script type="text/javascript" src="<?php echo get_template_directory_uri();?>/js/sink_js.jsp"></script>
+<link type="text/css" rel="stylesheet" media="all" href="<?php echo get_template_directory_uri();?>/styles/lightbox.css" id="lazy-loaded-1363052028412" />
+<script src="<?php echo get_template_directory_uri();?>/js/jquery-qtip-1.0.0-rc3.js" type="text/javascript"></script>
+<script src="<?php echo get_template_directory_uri();?>/js/orderForms.js" type="text/javascript"></script>
+<script src="<?php echo get_template_directory_uri();?>/js/checkoutHiddenFields.js" type="text/javascript"></script>
 
 
 </head>

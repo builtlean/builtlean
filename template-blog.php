@@ -66,17 +66,17 @@ wp_nav_menu( array(
 						<div class="thumb-img">
 							<?php
 							
-							if (has_post_thumbnail()) {
-								the_post_thumbnail('post-home_thumb');
+							if (has_post_thumbnail()) { ?>
+								<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('post-home_thumb'); ?></a>
 								
-							}else if ( $attachments ) {
+						<?php	}else if ( $attachments ) {
 								
 								foreach ( $attachments as $attachment ){
-									echo wp_get_attachment_image( $attachment->ID, 'post-home_thumb' );
+									echo '<a href="'. the_permalink() .'">'. wp_get_attachment_image( $attachment->ID, "post-home_thumb" ).'</a>';
 								}
 							}else{
 				
-								echo '<img id="img" src="'.get_bloginfo("template_directory").'/images/no_photo.jpg" />';
+								echo '<a href="'. the_permalink().'"><img id="img" src="'.get_bloginfo("template_directory").'/images/no_photo.jpg" /></a>';
 							}
 							
 							
