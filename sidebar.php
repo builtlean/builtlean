@@ -104,12 +104,13 @@
 		</div>
 			<!-- Google DFP -->
 			<!-- BuiltLean-Half-Page -->
-				<div id='div-gpt-ad-1363655684868-0' style='width:300px; height:600px;'>
+				<!-- <div id='div-gpt-ad-1363655684868-0' style='width:300px; height:600px;'>
 					<script type='text/javascript'>
 						googletag.cmd.push(function() { googletag.display('div-gpt-ad-1363655684868-0'); });
 					</script>
-				</div>
+				</div> -->
 			<!-- end Google DfP -->
+			<a href="http://www.builtlean.com/how-to-get-a-lean-body" onclick="_gaq.push(['_setCustomVar', 1, 'internal ad', 'bottom right sidebar | get lean guide landing page | only 3 workouts per week', 2]);_gaq.push(['_trackEvent', 'internal ad', 'clicked bottom right sidebar | get lean guide landing page', 'medium rectangle | only 3 workouts per week',, false]);"> <img src="<?php bloginfo('template_url'); ?>/images/mediumrectangle1.jpg" width="300" height="250" border="0"></a>
 	</div>
 	<div class="clear"></div>
 </div>

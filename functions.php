@@ -394,8 +394,7 @@ function dimox_breadcrumbs() {
   $text['search']   = 'Search Results for "%s" Query'; // text for a search results page
   $text['tag']      = 'Posts Tagged "%s"'; // text for a tag page
   $text['author']   = 'Articles Posted by %s'; // text for an author page
-  $text['404']      = 'Error 404'; // text for the 404 page
- 
+  $text['404']      = 'Error 404'; // text for the 404 page 
   $showCurrent = 0; // 1 - show current post/page title in breadcrumbs, 0 - don't show
   $showOnHome  = 0; // 1 - show breadcrumbs on the homepage, 0 - don't show
   $delimiter   = ' '; // delimiter between crumbs
@@ -419,6 +418,7 @@ function dimox_breadcrumbs() {
     echo '<div id="breadcrumbs2" xmlns:v="http://rdf.data-vocabulary.org/#">' . sprintf($link, $homeLink, $text['home']) . $delimiter;
 	echo '<a style="padding-right: 13px !important; margin-right: 7px !important;" href="' . $homeLink . 'blog">Blog</a>';
     if ( is_category() ) {
+		
       $thisCat = get_category(get_query_var('cat'), false);
       if ($thisCat->parent != 0) {
         $cats = get_category_parents($thisCat->parent, TRUE, $delimiter);
@@ -426,9 +426,17 @@ function dimox_breadcrumbs() {
         $cats = str_replace('</a>', '</a>' . $linkAfter, $cats);
         echo $cats;
       }
+     
       echo $before . sprintf($text['category'], single_cat_title('', false)) . $after;
  
-    } elseif ( is_search() ) {
+    }
+      elseif ( is_page() ) {
+      echo sprintf($link, get_post_type(get_the_title('Y')), get_the_title('Y')) . $delimiter;
+      echo sprintf($link, get_month_link(get_the_title('Y'),get_the_title('m')), get_the_title('F')) . $delimiter;
+      echo $before . get_the_title('d') . $after;
+ 
+    }
+      elseif ( is_search() ) {
       echo $before . sprintf($text['search'], get_search_query()) . $after;
  
     } elseif ( is_day() ) {
@@ -465,6 +473,7 @@ function dimox_breadcrumbs() {
       $post_type = get_post_type_object(get_post_type());
       echo $before . $post_type->labels->singular_name . $after;
  
+ 
     } elseif ( is_attachment() ) {
       $parent = get_post($post->post_parent);
       $cat = get_the_category($parent->ID); $cat = $cat[0];
@@ -475,10 +484,16 @@ function dimox_breadcrumbs() {
       printf($link, get_permalink($parent), $parent->post_title);
       if ($showCurrent == 1) echo $delimiter . $before . get_the_title() . $after;
  
-    } elseif ( is_page() && !$post->post_parent ) {
+    } 
+    
+    
+    
+    elseif ( is_page() && !$post->post_parent ) {
       if ($showCurrent == 1) echo $before . get_the_title() . $after;
  
-    } elseif ( is_page() && $post->post_parent ) {
+    }
+  
+      elseif ( is_page() && $post->post_parent ) {
       $parent_id  = $post->post_parent;
       $breadcrumbs = array();
       while ($parent_id) {
@@ -506,10 +521,11 @@ function dimox_breadcrumbs() {
     }
  
     if ( get_query_var('paged') ) {
-      if ( is_category() || is_day() || is_month() || is_year() || is_search() || is_tag() || is_author() ) echo ' (';
+      if ( is_page || is_category() || is_day() || is_month() || is_year() || is_search() || is_tag() || is_author() ) echo ' (';
       echo __('Page') . ' ' . get_query_var('paged');
-      if ( is_category() || is_day() || is_month() || is_year() || is_search() || is_tag() || is_author() ) echo ')';
+      if ( is_page || is_category() || is_day() || is_month() || is_year() || is_search() || is_tag() || is_author() ) echo ')';
     }
+     
  
     echo '</div>';
  

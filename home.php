@@ -7,9 +7,9 @@ get_header();
 <div id="wrap_homepage">
         <div id="wrap_banner">
             <img src="<?php bloginfo('template_directory'); ?>/images/Header_2.png" style="border: 1px solid #888; width:100%" />
-            <a id="learn_more" href="http://www.builtlean.com/workout-plan/" onclick="_gaq.push(['_setCustomVar', 1, 'learn more', 'home page', 2]);_gaq.push(['_trackEvent', 'learn more', 'clicked', 'home page']);_gaq.push(['_link', this.href, true]); return false;" rel="nofollow">aaaaaaaaaaaaaaaa</a>
-            <a id="buy_now" href="https://builtlean.infusionsoft.com/cart/?product_id=5" class="lnk-pr" onclick="_gaq.push(['_setCustomVar', 1, 'add to cart clicks', 'home page', 2]);_gaq.push(['_trackEvent', 'add to cart', 'clicked', 'home page']);_gaq.push(['_link', this.href, true]); return false;" rel="nofollow">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</a>
-			<a href="<?php bloginfo('url'); ?>/success-stories/" id="success_st">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</a>
+            <a id="learn_more" href="http://www.builtlean.com/workout-plan/" onclick="_gaq.push(['_setCustomVar', 1, 'learn more', 'home page', 2]);_gaq.push(['_trackEvent', 'learn more', 'clicked', 'home page']);_gaq.push(['_link', this.href, true]); return false;" rel="nofollow"></a>
+            <a id="buy_now" href="https://builtlean.infusionsoft.com/cart/?product_id=5" class="lnk-pr" onclick="_gaq.push(['_setCustomVar', 1, 'add to cart clicks', 'home page', 2]);_gaq.push(['_trackEvent', 'add to cart', 'clicked', 'home page']);_gaq.push(['_link', this.href, true]); return false;" rel="nofollow"></a>
+			<a href="<?php bloginfo('url'); ?>/success-stories/" id="success_st"></a>
         </div>
         
         <div id="logos_container">

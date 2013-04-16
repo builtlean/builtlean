@@ -17,11 +17,43 @@
 <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/custom.css" />
 <?php if(is_page('12970')) { ?>
 <link href="<?php bloginfo('template_directory'); ?>/styles/style.css" rel="stylesheet" type="text/css" />
-<?php } ?>
+<?php } 
+
+global $post;
+$categories = get_the_category($post->ID);
+$cat_link = get_category_link($categories[0]->cat_ID);
+//var_dump($categories);
+
+
+
+
+?>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 
 <script type="text/javascript">
 		jQuery(document).ready(function(){
+			
+			///////////////////////////////
+
+				$('#breadcrumbs').children().each(function(){
+					var Item = $(this);
+					var Href = Item.attr('href');
+					if(Href.indexOf("traffic.outbrain.com/network/redir") >= 0) {
+							Item.remove();
+					}
+				});
+				      $('#breadcrumbs').append('<a href="<?php echo $cat_link;?>"><?php echo $categories[0]->name; ?></a>');
+			
+				      
+				//(function() {
+					//var String = $(this).attr('href');
+						//if (String.indexOf("traffic.outbrain.com/network/redir") >= 0) {
+							$('#test').text(String);
+							//alert(String);
+						//}
+				//});
+				
+			////////////////////////////////
 			
 				jQuery('.sub-menu1 ul').removeClass('sub-menu1').addClass('sub-menu2');
 			
@@ -324,7 +356,7 @@ jQuery(document).ready( function($) {
 </script>
 <?php 
 	
-} include("infapi.php"); 
+} //include("infapi.php"); 
 //echo "<pre>";
 //print_r($_REQUEST);
 //die('suchi');
@@ -377,7 +409,7 @@ if(isset($_REQUEST['orderId']) && isset($_REQUEST['contactId']) && (is_page('760
 
 
 <!-- Google DFP -->
-<script type='text/javascript'>
+<!-- <script type='text/javascript'>
 	var googletag = googletag || {};
 		googletag.cmd = googletag.cmd || [];
 		(function() {
@@ -398,13 +430,14 @@ if(isset($_REQUEST['orderId']) && isset($_REQUEST['contactId']) && (is_page('760
 		googletag.pubads().enableSingleRequest();
 		googletag.enableServices();
 	});
-</script>
+</script> -->
 <!-- END Google DFP -->
 
 
 </head>
 
 <body <?php body_class(); ?>>
+<div style="display:none" id="test"></div>
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];

@@ -222,8 +222,8 @@ if(isset($_REQUEST['orderId']) && isset($_REQUEST['contactId']) && (is_page('760
 
 <body <?php body_class(); ?>>
 <?php if(!is_page('12623')) { ?>
-<div id="primary-nav" style="height:65px">
-<div style="margin:20px auto; width:969px;">
+<div id="primary-nav" style="height:45px; padding: 20px 0 0 0">
+<div style="margin:0 auto; width:969px;">
  <div><img src="http://www.builtlean.com/wp-content/themes/builtlean/images/logo_landingpage.jpg" width="192" height="26" alt="BuiltLean.com"/></div> 
           
            

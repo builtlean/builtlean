@@ -148,6 +148,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=
 		top: 239px;
 		left: 665px;
         margin: 0;
+        font-size:0px;
     }
         #wrap_banner #buy_now:hover {
             text-decoration: none;
@@ -162,7 +163,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=
 		left: 505px;
 		width: 125px;
         height: 27px;
-        
+        font-size:0px;
     }
     
 #logos_container {
@@ -170,6 +171,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=
 	margin-top: 15px;
 	width: 969px;
 	margin: 15px auto 0px auto;
+	font-size:0px;
 }
 
 .margin15auto{

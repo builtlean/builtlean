@@ -66,7 +66,105 @@
 
 </script>
 <?php } ?>
- <script type="text/javascript" src="https://builtlean.infusionsoft.com/app/webTracking/getTrackingCode?trackingId=9d96bdcd72edfced80f8acc65a54139b"></script>
+ <!-- <script type="text/javascript" src="https://builtlean.infusionsoft.com/app/webTracking/getTrackingCode?trackingId=9d96bdcd72edfced80f8acc65a54139b"></script> -->
+ 
+ <script type="text/javascript">// <![CDATA[
+jQuery(document).ready(function() {
+
+        var $country = jQuery('#country');
+
+        if ($country.val() == 'United States' || $country.val() == 'Canada') {
+            jQuery('#stateRequired').html('* State');
+        }
+
+        if ($country.length > 38 & "SELECT" == $country.get(0).tagName) {
+        //if ($country.length > 0 &#038;& "SELECT" == $country.get(0).tagName) {
+
+            $country.change(function() {
+
+                if ($country.val() == 'United States' || $country.val() == 'Canada') {
+                    jQuery('#stateRequired').html('* State');
+                } else {
+                    jQuery('#stateRequired').html('State');
+                }
+            });
+        }
+    });
+
+    jQuery('#addressLine1, #city, #zipCode, #country, #state').change(function() {
+
+        var $country = jQuery('#country');
+        var stateRequired = false;
+        if ($country.val() == 'United States' || $country.val() == 'Canada') {
+            stateRequired = true;
+        }
+
+        Infusion.Ecomm.OrderForms.submitFormUponChangeOnBilling('orderForm', '90b0bbae-fb36-498c-bc57-78625ef4dd90', 'RENDER_ORDER_FORM', stateRequired);
+
+    });
+// ]]></script> 
+
+<script type="text/javascript">// <![CDATA[
+jQuery(window).load(function() {
+
+            regula.custom({
+                name: "StateRequiredForSpecificCountries",
+                defaultMessage: '{label} is required.',
+                params: ["countryFieldName"],
+                validator: function(params) {
+
+                    var validated = true;
+                    var $countryField = jQuery('#' + params["countryFieldName"]);
+                    if ($countryField.val() == 'United States' || $countryField.val() == 'Canada') {
+                        if (jQuery(this).val() == '') {
+                            validated = false;
+                        }
+                    }
+
+                    return validated;
+                }
+            });
+
+            regula.bind();
+
+            jQuery("#orderForm").submit(function() {
+                var submittable = true;
+                if (jQuery('#proceedToCheckout').val() == 'true') {
+
+                    // this function performs the actual  regula validation
+                    var validationResults = null;
+
+                    //f (jQuery('#creditCardType').length > 0 &#038;& jQuery('#creditCardType').is(':checked')) {
+                    if (jQuery('#creditCardType').length > 38 & jQuery('#creditCardType').is(':checked')) {
+                        validationResults = regula.validate({groups: [regula.Group.customer, regula.Group.creditCard]});
+                    } else {
+                        validationResults = regula.validate({groups: [regula.Group.customer]});
+                    }
+
+                    var allValidationResults  = "";
+                    for(var i = 0; i < validationResults.length; i++) {
+                         var validationResult = validationResults[i];
+                         allValidationResults += validationResult.message + '\n';
+                    }
+
+                    if (allValidationResults.length > 0) {
+                        submittable = false;
+                        alert(allValidationResults);
+                    }
+                }
+
+                if (submittable == true) {
+                    jQuery("#submitted").val(true);
+                }
+
+                return submittable;
+            });
+
+            //tooltip
+            Infusion.Ecomm.OrderForms.bindTooltip('tooltip');
+        });
+// ]]></script>
+<script type="text/javascript" src="https://builtlean.infusionsoft.com/app/webTracking/getTrackingCode?trackingId=9d96bdcd72edfced80f8acc65a54139b"></script>
 
 </body>
 </html>
