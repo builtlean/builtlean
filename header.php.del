@@ -17,56 +17,45 @@
 <link rel="pingback" href="http://www.builtlean.com/xmlrpc.php" />
 <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/styles/custom.css" />
-
-
 <?php wp_head(); ?>
-<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery.stickem.js"></script>
-<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/custom.js"></script>
-	<script type="text/javascript">
-		
-		<?php if(is_single()) {	?>
-			$(document).ready(function(){
-				////////////////////////////////////
-				//Hack to fix breadcrumbs
-				////////////////////////////////////
-				$('#breadcrumbs').children().each(function(){
-					var Item = $(this);
-					var Href = Item.attr('href');
-					if(Href.indexOf("traffic.outbrain.com/network/redir") >= 0) {
-							Item.remove();
-					}
-				});
-				$('#breadcrumbs').append('<a href="<?php echo $cat_link;?>"><?php echo $categories[0]->name; ?></a>');
-			});
-		<?php } ?>
-		
-		///////////////////////////////
-		// google api
-		//////////////////////////////
-		var _gaq = _gaq || [];
-				_gaq.push(['_setAccount', 'UA-4567298-5']);
-				_gaq.push(['_setDomainName', 'builtlean.com']);
-				_gaq.push(['_setAllowLinker', true]);
-				_gaq.push(['_trackPageview']);
-				_gaq.push(['_addTrans',
-				 '<?php echo $OrderId;?>','builtlean.com',					
-				 '<?php echo $TotalPaid;?>',          
-				 '<?php echo $Taxable;?>',				
-				 '<?php echo $Shippable;?>',           
-				 '<?php echo $BillCity;?>',							
-				 '<?php echo $BillState;?>',					
-				 '<?php echo $BillCountry;?>'							
-				]);
 
-				_gaq.push(['_addItem',
-					'<?php echo $OrderId;?>',				
-					'<?php echo $Sku;?>',				
-					'<?php echo $ProductName;?>',        
-					'<?php echo $Category;?>',					
-					'<?php echo $ProductPrice;?>',       
-					'<?php echo $Qty;?>'				
-			  ]);
-				_gaq.push(['_trackTrans']);           
+<!--<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/stickysidebar.jquery.js" ></script> -->
+<!--<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery-scrolltofixed-min.js"></script>-->
+
+
+
+<?php wp_head();?> 
+<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery-scrolltofixed-min.js"></script>
+<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery.easing.1.3.js" ></script> 
+<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/custom.js" ></script>
+
+
+
+<script type="text/javascript">
+				var _gaq = _gaq || [];
+						_gaq.push(['_setAccount', 'UA-4567298-5']);
+						_gaq.push(['_setDomainName', 'builtlean.com']);
+						_gaq.push(['_setAllowLinker', true]);
+						_gaq.push(['_trackPageview']);
+						_gaq.push(['_addTrans',
+						 '<?php echo $OrderId;?>','builtlean.com',					
+						 '<?php echo $TotalPaid;?>',          
+						 '<?php echo $Taxable;?>',				
+						 '<?php echo $Shippable;?>',           
+						 '<?php echo $BillCity;?>',							
+						 '<?php echo $BillState;?>',					
+						 '<?php echo $BillCountry;?>'							
+						]);
+
+						_gaq.push(['_addItem',
+							'<?php echo $OrderId;?>',				
+							'<?php echo $Sku;?>',				
+							'<?php echo $ProductName;?>',        
+							'<?php echo $Category;?>',					
+							'<?php echo $ProductPrice;?>',       
+							'<?php echo $Qty;?>'				
+					  ]);
+						_gaq.push(['_trackTrans']);           
 
 
 		(function()
@@ -90,7 +79,7 @@
 					googletag.pubads().enableSingleRequest();
 					googletag.enableServices();
 			});
-		</script>	
+</script>	
 
 
 					    
@@ -102,37 +91,39 @@
 		$category = get_the_category($post->ID); 
 		$checkCat = $category[0]->cat_name;	
 		  if(in_category($category[0]->cat_name) && $checkCat != 'Uncategorized'){ ?>		
+			<!-- CSS STYLE -->
 			<style type="text/css">
 					#primary-nav li#menu-item-12473 a{
-						color: #E9E9E9;
-						text-decoration: none;
-						background: #272727;
-						font-weight: bold;
+					color: #E9E9E9;
+					text-decoration: none;
+					background: #272727;
+					font-weight: bold;
 					}
 					.menu_item_hovered_blog{
-						display: block;
-						color: #fff !important;
-						text-decoration:none;
-						padding:4px 13px;
-						background: #272727;
-						font-weight: bold;
+					display: block;
+					color: #fff !important;
+					text-decoration:none;
+					padding:4px 13px;
+					background: #272727;
+					font-weight: bold;
 					}
 					#breadcrumbs a:last-child {
-						background: none;
-						padding-left: 3px;
+					background: none;
+					padding-left: 3px;
 					}
 			</style>
+			<!-- END CSS STYLE -->
 	<?php
 			}
 		}
 	?>
 	<?php
-		//Small hack to remove big hover menu from posts
 		$alias = get_post_meta($post->ID, 'alias', $true);
-		if(is_single() || is_category() || $alias == 'blog') {
-	?>
+			if(is_single() || is_category() || $alias == 'blog'){ 
+			//if(is_single() || is_category() || is_page('blog')){ 
+		?>
 			<style type="text/css">
-				#menu-hover .sub-menu1 {display: none !important;}
+				#menu-hover .sub-menu1{	 display: none !important;	}
 			</style>
 	<?php } ?>
     
@@ -152,15 +143,15 @@
 		fjs.parentNode.insertBefore(js, fjs);
 		}(document, 'script', 'facebook-jssdk'));
 	</script>
-	
+	<!------------------
+	End Facebook Init
+	---------------------->
 				<div id="primary-nav">
 					<div style="margin:0px auto; width:969px;">
 						<div class="logo"><a href="http://www.builtlean.com"><img src="<?php echo get_option('smartblog_logo'); ?>" alt="BuiltLean.com" id="logo"/></a></div> 
 						<div style="height: 20px; float:right; margin-top:18px; width:280px">
 						<div id="cse-search-form" style="width: 100%;">Loading</div>
-				<!------------------
-				Google search
-				---------------------->
+				
 					<script src="http://www.google.com/jsapi" type="text/javascript"></script>
 						<script type="text/javascript"> 
 						google.load('search', '1', {language : 'en', style : google.loader.themes.MINIMALIST});
@@ -200,8 +191,10 @@
 								<a href="http://feeds.feedburner.com/BuiltLean" target="_blank"><img src="http://www.builtlean.com/wp-content/themes/builtlean/images/rss.png" width="32" height="32"></a>
 							</div>
 						</div> <!-- end #menu_top -->
+						<!------------------
+						End Main Menu Links
+						---------------------->
 			
 			<div class="clear"></div>
 		</div><!--#primary-nav-->
-		<div class="wrap container">
-			<div class="stickem-container">
+		<div class="wrap">

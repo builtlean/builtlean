@@ -1,69 +1,59 @@
 <?php
-
-
 /********* Admin CP v1.0 ************/
-
-
 /* Adds jquery script */
-add_action('wp_print_scripts', 'jquery_script',8);
-function jquery_script(){
-	if ( function_exists('esc_attr') ) wp_enqueue_script('jquery'); 
-	else { 
-		wp_deregister_script('jquery');
-		wp_register_script('jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js', false, '1.3.2'); 
+	add_action('wp_print_scripts', 'jquery_script',8);
+	function jquery_script(){
+		if ( function_exists('esc_attr') ) wp_enqueue_script('jquery'); 
+		else { 
+			wp_deregister_script('jquery');
+			wp_register_script('jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js', false, '1.3.2'); 
+		}
 	}
-}
-
-
 /* Admin scripts + ajax jquery code */
-function admin_js(){
-	$admincp_jsfolder = get_bloginfo('template_directory') . '/functions/js';
-	wp_enqueue_script('jquery-ui-tabs');
-	wp_enqueue_script('jquery-form');
-	wp_enqueue_script('admincp_checkbox',$admincp_jsfolder . '/checkbox.js');
-	wp_enqueue_script('admincp_functions_init',$admincp_jsfolder . '/functions-init.js');
-	wp_localize_script( 'admincp_functions_init', 'admincpSettings', array(
-			'clearpath' => get_bloginfo('template_directory') . '/functions/images/empty.png',
-			'admincp_nonce' => wp_create_nonce('admincp_nonce')
-	));
-	wp_enqueue_script('admincp_colorpicker',$admincp_jsfolder . '/colorpicker.js');
-	wp_enqueue_script('admincp_eye',$admincp_jsfolder . '/eye.js');
-	wp_enqueue_script('admincp_layout',$admincp_jsfolder . '/layout.js');	
-}
-/* --------------------------------------------- */
+	function admin_js(){
+		$admincp_jsfolder = get_bloginfo('template_directory') . '/functions/js';
+		wp_enqueue_script('jquery-ui-tabs');
+		wp_enqueue_script('jquery-form');
+		wp_enqueue_script('admincp_checkbox',$admincp_jsfolder . '/checkbox.js');
+		wp_enqueue_script('admincp_functions_init',$admincp_jsfolder . '/functions-init.js');
+		wp_localize_script( 'admincp_functions_init', 'admincpSettings', array(
+				'clearpath' => get_bloginfo('template_directory') . '/functions/images/empty.png',
+				'admincp_nonce' => wp_create_nonce('admincp_nonce')
+		));
+		wp_enqueue_script('admincp_colorpicker',$admincp_jsfolder . '/colorpicker.js');
+		wp_enqueue_script('admincp_eye',$admincp_jsfolder . '/eye.js');
+		wp_enqueue_script('admincp_layout',$admincp_jsfolder . '/layout.js');	
+	}
 
 /* Adds additional AdminCP css */
-function css_admin() { ?> 
-	<link rel="stylesheet" href="<?php bloginfo('template_directory') ?>/functions/css/admin-style.css" type="text/css" />
-	<style type="text/css">
-	.lightboxclose { background: url("<?php bloginfo('template_directory') ?>/functions/images/description-close.png") no-repeat; width: 19px; height: 20px; }
-	</style>
+	function css_admin() { ?> 
+		<link rel="stylesheet" href="<?php bloginfo('template_directory') ?>/functions/css/admin-style.css" type="text/css" />
+		<style type="text/css">
+		.lightboxclose { background: url("<?php bloginfo('template_directory') ?>/functions/images/description-close.png") no-repeat; width: 19px; height: 20px; }
+		</style>
 	<!--[if IE 8]>
 	<style type="text/css">
 			#admincp-save, #admincp-reset { font-size: 0px; display:block; line-height: 0px; bottom: 18px;}
 	</style>
 	<![endif]-->  
-<?php }
-/* --------------------------------------------- */
-
+	<?php }
 /* Save/Reset actions | Adds theme options to WP-Admin menu */
 add_action('admin_menu', 'mytheme_add_admin');
-function mytheme_add_admin() {
+	function mytheme_add_admin() {
 
-    global $themename, $shortname, $options;
-	$admincp = basename(__FILE__);
-	
-	if ( isset($_GET['page']) && $_GET['page'] == $admincp ) {
-		admincp_save_data();
+		global $themename, $shortname, $options;
+		$admincp = basename(__FILE__);
+		
+		if ( isset($_GET['page']) && $_GET['page'] == $admincp ) {
+			admincp_save_data();
+		}
+		
+		$core_page = add_theme_page($themename." Options", $themename." Theme Options", 'switch_themes', basename(__FILE__), 'mytheme_admin');
+		
+		add_action( "admin_print_scripts-{$core_page}", 'admin_js' );
+		
+		add_action("admin_head-{$core_page}", 'css_admin');
 	}
-	
-    $core_page = add_theme_page($themename." Options", $themename." Theme Options", 'switch_themes', basename(__FILE__), 'mytheme_admin');
-	
-	add_action( "admin_print_scripts-{$core_page}", 'admin_js' );
-	
-	add_action("admin_head-{$core_page}", 'css_admin');
-}
-/* --------------------------------------------- */
 
 /* Displays AdminCP */
 function mytheme_admin() {
