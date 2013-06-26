@@ -414,8 +414,8 @@ padding-left:3px;
 .entry li { padding-bottom: 2px; margin:0 10px; }
 .entry hr { border-top: 1px solid #FFF; border-top: 1px solid #C7D7DB; background: none; height: 0; margin: 0 0 20px 0; padding: 0; clear: both; }
 .entry hr.none { border: 0 none; height: 0; background: none; margin: 0; padding: 0; clear: both; }
-.entry a {  }
-.entry a:hover {  }
+.entry a { color: #0000FF; }
+.entry a:hover {  color: #0000FF; }
 .entry blockquote { margin: 20px 20px; padding: 0 30px 0 20px; overflow: hidden; border-left: 10px solid #F7F7F7; }
 
 /*EXTRA CSS TO SHINK THE FOOTNOTES*/
@@ -543,7 +543,7 @@ img.alignleft { padding: 0px; margin: 0px 10px 10px 0px; display: inline; }
 	font-size: 13px !important;
 }
 #popular_posts_title { 
-color: #000 !important;
+color: #272727 !important;
 font-size: 20px;
 font-family: Helvetica, Arial, san-serif;
 font-weight: normal;
@@ -1047,9 +1047,9 @@ a.button.active  {
     text-decoration: none;
 }
 
-#optinbox {background: url(./images/back-optin.jpg) no-repeat; position: relative;  width: 300px; margin-bottom:15px; }
+#optinbox{background: url(./images/back-optin.jpg) no-repeat; position: relative;  width: 300px; margin-bottom:15px; }
 
-#optinbox_alt { position: absolute; top: 163px; left: 38px;}
+#optinbox_alt{ position: absolute; top: 163px; left: 38px;}
 
 
 * html body #optinbox { right:0}
@@ -1459,7 +1459,7 @@ span.stButton span.email, span.sharethis {
 
 
 .related_p { font-weight:bold; float:left; width:294px; margin-left:15px; margin-top:2px; font-size:14px;}
-
+.related_p p{text-transform:uppercase;color:#272727;}
 .related_p li { margin-bottom:7px; border-bottom:1px dashed #eee; font-size:13px;} 
 
 
@@ -1813,44 +1813,52 @@ ul.landing-list {
 .optinbox {
 	display: block;
 	width: 300px;
-	height: 475px;
+	height: 150px;
 	margin: 0 0 15px 0;
-	background: url(images/bg-optin.png) 0 0 no-repeat;
+	background:url(images/opt-in-new1.jpg) no-repeat;
+	/*background: url(images/bg-optin.png) 0 0 no-repeat;height: 475px;*/
 	z-index: 2;
 }
 
 .optinbox-email {
 	position: relative;
-	left: 24px;
-	top: 347px;
+	left:11px;
+	top:81px;
+	width:204px;
+	/*left: 24px;top: 347px;*/
 }
 
 .optinbox-email input[type="text"] {
-	font-size: 13px;
-	width: 210px;
-	color: #1e1e1e;
-	border: none;
-	background: none;
-	text-shadow: 1px 1px 0 rgba(255,255,255,0.8);
+	background:none;
+   border:none;
+   color:#A3A3A3;
+   font-family: arial;
+   font-size:15px;
+   letter-spacing: 0.5px;
+   text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.8);
+   width: 190px;	
+	/*font-size:13px;width:210px;color:#1e1e1e;border:none;background:none;text-shadow:1px 1px 0 rgba(255,255,255,0.8);*/
 }
 
 .optinbox-submit {
 	position: relative;
-	top: 353px;
-	left: 77px;
+	top:47px;
+	left:217px;
+	/*top: 353px;left: 77px;*/
 }
 
 .optinbox-submit input[type="submit"] {
 	width: 218px;
 	height: 56px;
 	border: none;
-	background: url(images/bg-btn-optin2.png) 0 0 no-repeat;
+	background: url(images/button_send.gif) no-repeat;
+	/*background: url(images/bg-btn-optin2.png) 0 0 no-repeat;*/
 	text-indent: -9999px;
 	cursor: pointer;
 }
 
 .optinbox-submit input[type="submit"]:hover {
-	background-position: 0 -56px;
+	background-position: 0 -57px;
 }
 
 .optinbox-privacy {
@@ -1859,17 +1867,18 @@ ul.landing-list {
 	left: 20px;
 	padding: 2px 0 0 20px;
 	font-size: 10px;
-	color: #d9d9d9;
-	background: url(images/bg-optin-lock.png) 0 4px no-repeat;
+	color:#fff;/*color: #d9d9d9;*/
+	background: url(images/lacat.png) no-repeat;
+	/*background: url(images/bg-optin-lock.png) 0 4px no-repeat;*/
 }
 
 .optinbox-privacy a {
-	color: #ccffff;
+	color:#fff;/*color: #ccffff;*/
 	text-decoration: underline;
 }
 
 .optinbox-privacy a:hover {
-	text-decoration: none;
+	/*text-decoration: none;*/
 }
 
 .cycle-js {
@@ -2860,3 +2869,10 @@ background-position-x: 10px;
 	position: absolute;
 	right: 0;
 }
+
+.textwidget{
+   margin: 0 0 0 -22px !important;
+}
+
+
+

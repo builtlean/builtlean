@@ -34,6 +34,4 @@ if (!function_exists('tj_deregister_widgets')) {
 	}
 }
 add_action('widgets_init', 'tj_deregister_widgets');  
-
-
 ?>

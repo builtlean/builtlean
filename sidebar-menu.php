@@ -1,4 +1,20 @@
-<div id="sidebar" class="stickem <?php if(get_option('smartblog_homepage_layout') == 'Content | Sidebar') { echo('right'); } else { echo('left'); } ?>">	
+<div id="sidebar" class="stickem <?php if(get_option('smartblog_homepage_layout') == 'Content | Sidebar') { echo('right'); } else { echo('left'); } ?>">
+<!----- Start Main Menu Right ------------>
+	<div class="menu_right" style="display:block;">
+		<?php
+			wp_nav_menu( array(
+				'theme_location' => 'right-menu-nav',
+				'container' =>false,
+				'echo' => true,
+				'depth' => 0,
+				'menu_class' => 'menu-right-menu'
+				)
+			);
+		?>
+	</div>
+	<!-- end #menu_right -->	
+	<div class="sidebar-block"> </div>
+	
 <div class="optinbox">
       <form action="https://builtlean.infusionsoft.com/AddForms/processFormSecure.jsp" onSubmit="_gaq.push(['_setCustomVar', 1, 'newsletter sign up', 'top right opt-in', 1]);_gaq.push(['_trackEvent', 'newsletter', 'sign up', 'top right opt-in']);" method='POST'>
          <input type="hidden" name="infusion_xid" id="infusion_xid" value="7b5c4c539110daaf295e6bf49596ccc0" />
@@ -16,6 +32,15 @@
       </div>      
       </div>
       <div class="sidebar-block"></div>
+	
+
+	
+	
+	
+	
+	
+	
+	
 	  <div id="popular-posts"  class="widget" style="float: left;">
 <?php
 		$pop = $wpdb->get_results("SELECT id, post_title, comment_count FROM {$wpdb->prefix}posts WHERE post_type='post' ORDER BY comment_count DESC LIMIT 5");

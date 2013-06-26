@@ -49,7 +49,7 @@
 		    <div class="clear"></div>
 		</div><!--end .pagination-->				    
 	<?php } ?>
-			
+
 </div><!--end #content-->
 
 <?php get_sidebar(); ?>

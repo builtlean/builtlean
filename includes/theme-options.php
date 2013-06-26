@@ -681,5 +681,4 @@ function custom_colors_css(){
 	</style>
 
 <?php };
-
 ?>

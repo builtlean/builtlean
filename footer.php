@@ -22,7 +22,7 @@
 			<div class="blocks no-padd">
 				<h2>Join our email list</h2>
 				<p>Join our email list for exclusive offers and weekly updates</p>
-				<form action="https://builtlean.infusionsoft.com/AddForms/processFormSecure.jsp" target="_blank" onsubmit="_gaq.push(['_setCustomVar', 1, 'newsletter sign up', 'top right opt-in', 1]);_gaq.push(['_trackEvent', 'newsletter', 'sign up', 'top right opt-in']);" method="POST">
+					<form action="https://builtlean.infusionsoft.com/AddForms/processFormSecure.jsp" target="_blank" onsubmit="_gaq.push(['_setCustomVar', 1, 'newsletter sign up', 'footer', 1]);_gaq.push(['_trackEvent', 'newsletter', 'sign up', 'footer']);" method="POST">
 					 <input type="hidden" name="infusion_xid" id="infusion_xid" value="7b5c4c539110daaf295e6bf49596ccc0">
 					 <input type="hidden" name="infusion_type" id="infusion_type" value="CustomFormWeb">
 					 <input type="hidden" name="infusion_name" id="infusion_name" value="New Lead">				
@@ -126,28 +126,14 @@
 	</script>
 	<script type="text/javascript">
 		window.fbAsyncInit = function() {
-		FB.Event.subscribe('edge.create', function(targetUrl) {
-		_gaq.push(['_trackSocial', 'facebook', 'like', targetUrl]);
-	});
- };
+			FB.Event.subscribe('edge.create', function(targetUrl) {
+				_gaq.push(['_trackSocial', 'facebook', 'like', targetUrl]);
+			});
+		 };
 	</script>
 	<?php if(!is_page('7607')) { ?>
-	<script type="text/javascript">
-		var _gaq = _gaq || [];
-		_gaq.push(['_setAccount', 'UA-4567298-5']);
-		_gaq.push(['_setDomainName', 'builtlean.com']);
-		_gaq.push(['_setAllowLinker', true]);
-		_gaq.push(['_trackPageview']);
-	(function() {
-		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-		 ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-	})();
-
-	</script>
+	<!-- removed GA code -->
 	<?php } ?>
-	<script type="text/javascript" src="https://builtlean.infusionsoft.com/app/webTracking/getTrackingCode?trackingId=9d96bdcd72edfced80f8acc65a54139b">
-	</script>
 			<script type="text/javascript">
 	<!-- Start BounceX tag for BuiltLean -->
 			(function(d) {

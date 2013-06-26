@@ -22,88 +22,115 @@
 <?php wp_head(); ?>
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery.stickem.js"></script>
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/custom.js"></script>
+<?php
+	$alias = get_post_meta($post->ID, 'alias', true);
+?>
 	<script type="text/javascript">
-		
-		<?php if(is_single()) {	?>
 			$(document).ready(function(){
-				////////////////////////////////////
-				//Hack to fix breadcrumbs
-				////////////////////////////////////
-				$('#breadcrumbs').children().each(function(){
-					var Item = $(this);
-					var Href = Item.attr('href');
-					if(Href.indexOf("traffic.outbrain.com/network/redir") >= 0) {
-							Item.remove();
-					}
-				});
-				$('#breadcrumbs').append('<a href="<?php echo $cat_link;?>"><?php echo $categories[0]->name; ?></a>');
+				<?php if(is_single()) {	?>
+					////////////////////////////////////
+					//Hack to fix breadcrumbs
+					////////////////////////////////////
+					$('#breadcrumbs').children().each(function(){
+						var Item = $(this);
+						var Href = Item.attr('href');
+						if(Href.indexOf("traffic.outbrain.com/network/redir") >= 0) {
+								Item.remove();
+						}
+					});
+					$('#breadcrumbs').append('<a href="<?php echo $cat_link;?>"><?php echo $categories[0]->name; ?></a>');
+				<?php } ?>
 			});
-		<?php } ?>
 		
 		///////////////////////////////
 		// google api
 		//////////////////////////////
-		var _gaq = _gaq || [];
-				_gaq.push(['_setAccount', 'UA-4567298-5']);
-				_gaq.push(['_setDomainName', 'builtlean.com']);
-				_gaq.push(['_setAllowLinker', true]);
-				_gaq.push(['_trackPageview']);
-				_gaq.push(['_addTrans',
-				 '<?php echo $OrderId;?>','builtlean.com',					
-				 '<?php echo $TotalPaid;?>',          
-				 '<?php echo $Taxable;?>',				
-				 '<?php echo $Shippable;?>',           
-				 '<?php echo $BillCity;?>',							
-				 '<?php echo $BillState;?>',					
-				 '<?php echo $BillCountry;?>'							
-				]);
+				<?php
+					if((isset($_REQUEST['orderId']) || isset($_REQUEST['contactId'])) && (($alias == 'thank-you-purchase') || ($alias=='thank-you-purchase-paypal'))) {
+				?>
+						var _gaq = _gaq || [];
+							_gaq.push(['_setAccount', 'UA-4567298-5']);
+							_gaq.push(['_setDomainName', 'builtlean.com']);
+							_gaq.push(['_setAllowLinker', true]);
+							_gaq.push(['_trackPageview']);
+							_gaq.push(['_addTrans',
+								'<?php echo $OrderId;?>','builtlean.com',					
+								'<?php echo $TotalPaid;?>',        
+								'<?php echo $Taxable;?>',				
+								'<?php echo $Shippable;?>',           
+								'<?php echo $BillCity;?>',					
+								'<?php echo $BillState;?>',					
+								'<?php echo $BillCountry;?>'						
+							]);
+							_gaq.push(['_addItem',
+								'<?php echo $OrderId;?>',				
+								'<?php echo $Sku;?>',					
+								'<?php echo $ProductName;?>',         
+								'<?php echo $Category;?>',					
+								'<?php echo $ProductPrice;?>',       
+								'<?php echo $Qty;?>'			
+							]);
+							_gaq.push(['_trackTrans']);          
+								
 
-				_gaq.push(['_addItem',
-					'<?php echo $OrderId;?>',				
-					'<?php echo $Sku;?>',				
-					'<?php echo $ProductName;?>',        
-					'<?php echo $Category;?>',					
-					'<?php echo $ProductPrice;?>',       
-					'<?php echo $Qty;?>'				
-			  ]);
-				_gaq.push(['_trackTrans']);           
+						(function() { 
+							var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+							ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+							var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+						})();
 
 
-		(function()
-				{var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-					 ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-				 var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-				})();
-				 var googletag = googletag || {};
-					 googletag.cmd = googletag.cmd || [];
-		(function() {
-				 var gads = document.createElement('script');
-					 gads.async = true;
-					 gads.type = 'text/javascript';
-				 var useSSL = 'https:' == document.location.protocol;
-					 gads.src = (useSSL ? 'https:' : 'http:') + '//www.googletagservices.com/tag/js/gpt.js';
-				 var node = document.getElementsByTagName('script')[0];
-					 node.parentNode.insertBefore(gads, node);
+				<?php } else {?>
+						var _gaq = _gaq || [];
+							_gaq.push(['_setAccount', 'UA-4567298-5']);
+							_gaq.push(['_setDomainName', 'builtlean.com']);
+							_gaq.push(['_setAllowLinker', true]);
+							_gaq.push(['_trackPageview']);
+						(function() { 
+							var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+							ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+							var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+						})();
+
+				<?php } ?>
+
+
+
+
+
+
+				var googletag = googletag || {};
+				googletag.cmd = googletag.cmd || [];
+				(function() {
+					var gads = document.createElement('script');
+					gads.async = true;
+					gads.type = 'text/javascript';
+					var useSSL = 'https:' == document.location.protocol;
+					gads.src = (useSSL ? 'https:' : 'http:') + 
+					'//www.googletagservices.com/tag/js/gpt.js';
+					var node = document.getElementsByTagName('script')[0];
+					node.parentNode.insertBefore(gads, node);
 				})();
 				googletag.cmd.push(function() {
-					googletag.defineSlot('/29676084/BuiltLean-Half-Page', [300, 600], 'div-gpt-ad-1363655684868-0').addService(googletag.pubads());
+					googletag.defineSlot('/29676084/BuiltLean-Half-Page', [[160, 600], [300, 250], [300, 600]], 'div-gpt-ad-1371054573188-0').addService(googletag.pubads());
+					googletag.defineSlot('/29676084/BuiltLeanATFMREC', [300, 250], 'div-gpt-ad-1371054573188-1').addService(googletag.pubads());
+					googletag.defineSlot('/29676084/BuiltLeanUnderPost', [300, 250], 'div-gpt-ad-1371054573188-2').addService(googletag.pubads());
 					googletag.pubads().enableSingleRequest();
 					googletag.enableServices();
-			});
-		</script>	
-
-
-					    
+				});
+</script>
+				    
 	<?php
 	///////////////////////////////
 	// Hack to fix menu hover on blog
 	//////////////////////////////
-	if(is_single() || is_category()){
+	$alias = get_post_meta($post->ID, 'alias', $true);
+	if(is_single() || is_category() || ($alias == 'blog')){
 		$category = get_the_category($post->ID); 
 		$checkCat = $category[0]->cat_name;	
 		  if(in_category($category[0]->cat_name) && $checkCat != 'Uncategorized'){ ?>		
 			<style type="text/css">
-					#primary-nav li#menu-item-12473 a{
+					#primary-nav li#menu-item-13091 a {
 						color: #E9E9E9;
 						text-decoration: none;
 						background: #272727;
@@ -128,14 +155,98 @@
 	?>
 	<?php
 		//Small hack to remove big hover menu from posts
-		$alias = get_post_meta($post->ID, 'alias', $true);
 		if(is_single() || is_category() || $alias == 'blog') {
+		//if(is_single() || is_category()) {
 	?>
 			<style type="text/css">
 				#menu-hover .sub-menu1 {display: none !important;}
 			</style>
 	<?php } ?>
-    
+<style type="text/css">
+.optinbox {float: right;
+	display: block;
+	width: 300px;
+	height: 150px;
+	margin: 0 0 15px 0;
+	background:url(http://files.builtlean.com/wp-content/themes/builtlean/images/opt-in-new1.jpg) no-repeat;
+	z-index: 2;
+}
+.optinbox-email {
+	position: relative;
+	left:11px;
+	top:81px;
+	width:204px;
+}
+.optinbox-email input[type="text"] {
+	background:none;
+   border:none;
+   color:#A3A3A3;
+   font-family: arial;
+   font-size:15px;
+   letter-spacing: 0.5px;
+   text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.8);
+   width: 190px;
+}
+.optinbox-submit {
+	position: relative;
+	top:47px;
+	left:217px;
+	width: 72px;
+}
+.optinbox-submit input[type="submit"] {
+	width: 71px;
+	height: 56px;
+	border: none;
+	background: url(http://files.builtlean.com/wp-content/themes/builtlean/images/button_send.gif) no-repeat;
+	text-indent: -9999px;
+	cursor: pointer;
+}
+.optinbox-submit input[type="submit"]:hover {
+	background-position: 0 -57px;
+}
+
+.optinbox-privacy {
+	position: relative;
+	top: 40px;
+	left: 20px;
+	padding: 2px 0 0 20px;
+	font-size: 10px;
+	color:#fff;/*color: #d9d9d9;*/
+	background: url(http://files.builtlean.com/wp-content/themes/builtlean/images/lacat.png) 0 2px no-repeat;
+}
+.optinbox-privacy a {
+	color:#fff;/*color: #ccffff;*/
+	text-decoration: underline;
+}
+.optinbox-privacy a:hover {
+	text-decoration: underline;
+}
+
+/*.textwidget{margin: 0 0 0 -22px !important;}*/
+#popular_posts_title{color: #272727 !important;}
+.related_p p{text-transform:uppercase;color:#272727;}
+
+
+
+/****menu right****/
+.menu_right{float:right;margin-bottom:15px;width:315px;}
+.menu_right ul#menu-right-menu li{background:#161616;padding:9px 15px 0;margin-left:15px;width:270px;float:left;}
+.menu_right ul#menu-right-menu li a{float:left;color:#fff;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif,sans-serif;border-bottom:1px solid #F0F0F0;font-size:14px;font-weight:bold;line-height:27px !important;text-decoration:none;text-transform:uppercase;padding:0 0 3px;width:257px;}
+.menu_right ul#menu-right-menu li:last-child a{border:none;}
+.menu_right ul#menu-right-menu li:last-child{padding-bottom:19px;}
+.menu_right ul#menu-right-menu li:first-child{padding-top:29px;background-position:0 0 !important;}
+.menu_right ul#menu-right-menu li.current-menu-item,.menu_right ul#menu-right-menu li:hover{width:315px;margin-left:0;padding:0 0 16px;margin-bottom:-10px;margin-top:-1px;background:url(http://files.builtlean.com/wp-content/themes/builtlean/images/select2.png) 0 -19px no-repeat;}
+.menu_right ul#menu-right-menu li.current-menu-item a,.menu_right ul#menu-right-menu li:hover a{color:#000;padding:7px 0 0 30px;}
+.menu_right ul#menu-right-menu li:hover:last-child{padding-bottom:25px;margin-bottom:0;}
+.menu_right ul#menu-right-menu li:hover:first-child{margin-top:0;padding-top:19px;}
+
+.menu_right ul#menu-right-menu li.current-menu-item:last-child{padding-bottom:25px;margin-bottom:0;}
+.menu_right ul#menu-right-menu li.current-menu-item:first-child{margin-top:0;padding-top:19px;}
+
+
+.printfriendly img{margin:3px 1px 0 7px !important;}
+.printfriendly span{font-size:11px !important;}
+</style>
 </head>
 <body <?php body_class(); ?>>
 	<!------------------

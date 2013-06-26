@@ -9,6 +9,7 @@ function register_main_menus() {
 			'support-nav' => __( 'Support Nav' ),
 			'company-nav' => __( 'Company Nav' ),
 			'popular-pages-nav' => __( 'Popular Pages Nav' ),
+			'right-menu-nav' => __( ' Right Menu Nav' ),
 			'website-usage-nav' => __( 'Website Usage Nav' )
 		)
 	);
@@ -152,7 +153,7 @@ function tj_related_posts() {
 	  );
 	  $my_query = new WP_Query($args);
 	  if( $my_query->have_posts() ) { $related_post_found = true; ?>
-		<h3><?php _e('Related Posts','themejunkie'); ?></h3>
+		<h3><?php _e('Related Articles','themejunkie'); ?></h3>
 		<div class="clear"></div>
 			<ul>		
 	    <?php while ($my_query->have_posts()) : $my_query->the_post(); ?>
@@ -235,5 +236,4 @@ if ( !function_exists( 'tj_twitter_script') ) {
 	<?php
 	}
 }
-
 ?>

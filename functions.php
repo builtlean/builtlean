@@ -657,5 +657,4 @@ $form = '<form id="orderForm" action="https://builtlean.infusionsoft.com/AddForm
 }
 add_shortcode( 'infusions_of', 'infusions_of_func' );
 
-
 ?>

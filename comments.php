@@ -74,8 +74,8 @@
 		<label for="url"><?php _e('Website', 'themejunkie') ?></label>
 		</p>
 	<?php endif;  ?>
-	<?php _e('You can use these tags', 'themejunkie'); ?>:
-	<?php echo allowed_tags(); ?></p>-->
+	 <?php /// _e('You can use these tags', 'themejunkie'); ?> 
+	<?php ///echo allowed_tags(); ?></p>
 		<p><textarea name="comment" id="comment" rows="10" cols="50" tabindex="4"></textarea></p>
 		<input name="submit" type="submit" id="submit" class="button" tabindex="5" value="<?php _e('Submit Comment', 'themejunkie') ?>" />
 		<input type="hidden" name="comment_post_ID" value="<?php echo $id; ?>" />		

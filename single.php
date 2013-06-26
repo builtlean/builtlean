@@ -123,8 +123,14 @@
 				<a style="color: #aaa" href="http://www.builtlean.com/advertising-policy/" rel="nofollow"><small>Advertisement</small></a>
 			</div>
 			<div style="float:left; clear:left; margin:5px 0 15px 0;">
-	  <a href="http://www.builtlean.com/how-to-get-a-lean-body" target="_blank" onclick="_gaq.push(['_setCustomVar', 1, 'internal ad', 'underneath article | get lean guide landing page | only 3 workouts per week', 2]);_gaq.push(['_trackEvent', 'internal ad', 'clicked underneath article | get lean guide landing page', 'medium rectangle | only 3 workouts per week',, false]);"> <img src="http://www.builtlean.com/wp-content/uploads/2012/06/mediumrectangle1.jpg" width="300" height="250" border="0"></a>    
-    </div>
+			 <!-- <a href="http://www.builtlean.com/how-to-get-a-lean-body" target="_blank" onclick="_gaq.push(['_setCustomVar', 1, 'internal ad', 'underneath article | get lean guide landing page | only 3 workouts per week', 2]);_gaq.push(['_trackEvent', 'internal ad', 'clicked underneath article | get lean guide landing page', 'medium rectangle | only 3 workouts per week',, false]);"> <img src="http://www.builtlean.com/wp-content/uploads/2012/06/mediumrectangle1.jpg" width="300" height="250" border="0"></a>   -->
+	 		<!-- BuiltLeanUnderPost -->
+				 <div id='div-gpt-ad-1371054573188-2' style='width:300px; height:250px;float:left;'>
+					<script type='text/javascript'>
+						googletag.cmd.push(function() { googletag.display('div-gpt-ad-1371054573188-2'); });
+					</script>
+ 		 		</div>
+    		</div>
  <div class="related_p">
     <?php related_posts(); ?>
     </div>

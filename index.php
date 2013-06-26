@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-	<div id="content_home" class="<?php if(get_option('smartblog_homepage_layout') == 'Content | Sidebar') { echo('left'); } else { echo('right'); } ?>">
+<div id="content_home" class="<?php if(get_option('smartblog_homepage_layout') == 'Content | Sidebar') { echo('left'); } else { echo('right'); } ?>">
 <?php if(get_option('smartblog_content_layout') == 'Layout #1') { ?>
 	<div id="featured">
 <?php 
