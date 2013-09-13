@@ -14,7 +14,7 @@
             </div>
             <div class="clear"></div>
       </div>        
-      <h2 class="title_list">RECENT ARTICLES</h2>
+      <p class="title_list">RECENT ARTICLES</p>
       <div id="list_articles">
   <?php		
        $latest = array(
@@ -61,7 +61,7 @@
    ?>
    <div class="clear"></div>
    </div>
-	    <h2 class="title_list">FEATURED ARTICLES</h2>
+	    <p class="title_list">FEATURED ARTICLES</p>
         <div id="list_articles">
             <?php		
                $catID = get_cat_ID(get_option('smartblog_featured_cat_articles'));
@@ -115,8 +115,8 @@
 						<input type="hidden" name="infusion_xid" id="infusion_xid" value="7b5c4c539110daaf295e6bf49596ccc0" />
 						<input type="hidden" name="infusion_type" id="infusion_type" value="CustomFormWeb" />
 						<input type="hidden" name="infusion_name" id="infusion_name" value="New Lead" />
-						<input type="email" name="Contact0Email" id="ribbon_text_input" placeholder="Enter Your Email..." />
-						<input type="submit" name="Submit" value="Get instant access" id="ribbon_submit_input" />
+						<input type="email" name="Contact0Email" id="ribbon_text_input" placeholder="Enter your email here..." />
+						<input type="submit" name="Submit" value="SEND" id="ribbon_submit_input" />
 						<input type="hidden" name="Contact0_GaContent" value="-">
 						<input type="hidden" name="Contact0_GaSource" value="(direct)">
 						<input type="hidden" name="Contact0_GaMedium" value="(none)">

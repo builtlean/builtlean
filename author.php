@@ -1,11 +1,10 @@
 <?php get_header(); ?>
-
-
 			<div id="content" class="<?php if(get_option('smartblog_homepage_layout') == 'Content | Sidebar') { echo('left'); } else { echo('right'); } ?>">
 		<?php include(TEMPLATEPATH. '/includes/templates/breadcrumbs.php'); ?>
 		<?php if(get_option('smartblog_show_author_box') == 'on') { ?> 
 		<?php
 			$curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : get_userdata(intval($author));
+			//print_r($curauth);
     ?>
 <!-- author avatar div -->
     <div class="author-details">
@@ -15,14 +14,14 @@
 	</div> 
 <!--end .author-avatar-->
 	<div class="author-name">
-		<?php if (get_the_author_meta('full-name', $curauth->id)) { ?>
-		<h2><?php echo get_the_author_meta('full-name', $curauth->id); ?></h2>
+		<?php if (get_the_author_meta('fullname', $curauth->id)) { ?>
+		<h2><?php echo get_the_author_meta('fullname', $curauth->id); ?></h2>
 		<?php }?>
 		<?php if (get_the_author_meta('designations', $curauth->id)) { ?>
 		<span><?php echo get_the_author_meta('designations', $curauth->id); ?></span>
 		<?php }?>
-		<?php if (get_the_author_meta('custom-role', $curauth->id)) { ?>
-		<h3><?php echo get_the_author_meta('custom-role', $curauth->id); ?></h3>
+		<?php if (get_the_author_meta('customrole', $curauth->id)) { ?>
+		<h3><?php echo get_the_author_meta('customrole', $curauth->id); ?></h3>
 		<?php }?>
 	</div>
 	</div>

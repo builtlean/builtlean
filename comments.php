@@ -10,7 +10,7 @@
 		<div id="comments">
 	<?php if ( have_comments() ) : ?>
 	<?php if ( ! empty($comments_by_type['comment']) ) : ?>
-		<h3><?php comments_number(__('No Responses', 'themejunkie'), __('One Response', 'themejunkie'), __('% Responses', 'themejunkie') );?> <?php _e('to', 'themejunkie') ?> &#8220;<?php the_title(); ?>&#8221;</h3>
+		<p class="title"><?php comments_number(__('No Responses', 'themejunkie'), __('One Response', 'themejunkie'), __('% Responses', 'themejunkie') );?> <?php _e('to', 'themejunkie') ?> &#8220;<?php the_title(); ?>&#8221;</p>
 		<ol class="commentlist">
 	<?php wp_list_comments('avatar_size=35&callback=custom_comment&type=comment'); ?>
 		</ol>    
@@ -22,7 +22,7 @@
 <!-- /.navigation -->
 	<?php endif; ?>
 	<?php if ( ! empty($comments_by_type['pings']) ) : ?>
-		<h3 id="pings"><?php _e('Trackbacks/Pingbacks', 'themejunkie') ?></h3>
+		<p class="title" id="pings"><?php _e('Trackbacks/Pingbacks', 'themejunkie') ?></p>
 		<ol class="pinglist">
     <?php wp_list_comments('type=pings&callback=list_pings'); ?>
         </ol>
@@ -30,10 +30,10 @@
     <?php else : // this is displayed if there are no comments so far ?>
     <?php if ('open' == $post->comment_status) : ?>
 <!-- If comments are open, but there are no comments. -->
-		<p class="nocomments"><?php _e('No comments yet.', 'themejunkie') ?></p>
+		<p class="nocomments title"><?php _e('No comments yet.', 'themejunkie') ?></p>
 	<?php else :?>
 <!-- If comments are closed. -->
-		<p class="nocomments"><?php _e('Comments are closed.', 'themejunkie') ?></p>
+		<p class="nocomments title"><?php _e('Comments are closed.', 'themejunkie') ?></p>
 	<?php endif; ?>
 	<?php endif; ?>
 	<?php if ( ! comments_open( $post_id )) : ?>
@@ -46,7 +46,7 @@
 <!-- /#comments_wrap -->
 	<?php if ('open' == $post->comment_status) : ?>
 		<div id="respond">
-		<h3><?php comment_form_title( __('Leave a Comment', 'themejunkie'), __('Leave a Reply to %s', 'themejunkie') ); ?></h3>
+		<p class="title"><?php comment_form_title( __('Leave a Comment', 'themejunkie'), __('Leave a Reply to %s', 'themejunkie') ); ?></p>
 		<div class="info-block">
 		<p><strong><a href="http://www.builtlean.com/comment-policy/" target="_blank" rel="nofollow">Comment Rules</strong></a> &ndash; If you have a lengthy personal fitness question, or one that is not related to the article, please post it to our <a href="http://www.facebook.com/builtlean" target="_blank" rel="nofollow" onclick="_gaq.push(['_setCustomVar', 1, 'comment rules', 'comment rules| facebook link', 2]);_gaq.push(['_trackEvent', 'comment rules', 'clicked facebook link', 'comment rules| facebook link',, false]);">BuiltLean Facebook Community Page</a> where we have thousands of fitness enthusiasts who can help you.  If you are new to BuiltLean, we recommend checking out our free <a href="http://www.builtlean.com/how-to-get-a-lean-body/" target="_blank" rel="nofollow" onclick="_gaq.push(['_setCustomVar', 1, 'comment rules', 'comment rules| get lean guide link', 2]);_gaq.push(['_trackEvent', 'comment rules', 'clicked get lean guide', 'comment rules| get lean guide',, false]);">Get Lean Guide</a>, which can help answer many of your questions. We're excited for you to join the conversation!</p>
 	    </div>

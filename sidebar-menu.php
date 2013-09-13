@@ -14,31 +14,24 @@
 	</div>
 	<!-- end #menu_right -->	
 	<div class="sidebar-block"> </div>
-	
 <div class="optinbox">
-      <form action="https://builtlean.infusionsoft.com/AddForms/processFormSecure.jsp" onSubmit="_gaq.push(['_setCustomVar', 1, 'newsletter sign up', 'top right opt-in', 1]);_gaq.push(['_trackEvent', 'newsletter', 'sign up', 'top right opt-in']);" method='POST'>
-         <input type="hidden" name="infusion_xid" id="infusion_xid" value="7b5c4c539110daaf295e6bf49596ccc0" />
-         <input type="hidden" name="infusion_type" id="infusion_type" value="CustomFormWeb" />
-         <input type="hidden" name="infusion_name" id="infusion_name" value="New Lead" />
-     <div class="optinbox-email">
-         <input size="42" type="text" onblur="if (this.value == '') {this.value = 'Enter your email here...';}" onfocus="if (this.value == 'Enter your email here...') {this.value = '';}" name="Contact0Email" id="Contact0Email" value="Enter your email here..." />
-     </div>
-     <div class="optinbox-submit">
-          <input type="submit" name="Submit" value="Submit" />
-     </div>
-		  </form>
+		<form accept-charset="UTF-8" action="https://builtlean.infusionsoft.com/app/form/process/c5150c9d1f2a46cf7265fa72d4e07cd9" class="infusion-form" onSubmit="_gaq.push(['_setCustomVar', 1, 'newsletter sign up', 'top right opt-in', 1]);_gaq.push(['_trackEvent', 'newsletter', 'sign up', 'top right opt-in']);" method="POST">
+   		<input name="inf_form_xid" type="hidden" value="c5150c9d1f2a46cf7265fa72d4e07cd9" />
+   		<input name="inf_form_name" type="hidden" value="Free Workout - Sidebar" />
+    		<input name="infusionsoft_version" type="hidden" value="1.29.3.46" />
+    		<div class="optinbox-email">
+        		<label for="inf_field_Email" style="display:none;">Email *</label>
+        		<input class="infusion-field-input-container" name="inf_field_Email" id="inf_field_Email" size="42" type="text" onblur="if (this.value == '') {this.value = 'Enter your email here...';}" onfocus="if (this.value == 'Enter your email here...') {this.value = '';}" value="Enter your email here..." />
+    		</div>
+    		<div class="optinbox-submit">
+        		<input type="submit" value="Submit" />
+    		</div>
+		</form>
       <div class="optinbox-privacy">
          <span>Your email is safe and secure per our <a href="http://www.builtlean.com/privacy-policy/" rel="nofollow" target="_blank">privacy policy</a></span>
       </div>      
       </div>
       <div class="sidebar-block"></div>
-	
-
-	
-	
-	
-	
-	
 	
 	
 	  <div id="popular-posts"  class="widget" style="float: left;">
@@ -55,7 +48,10 @@
     <?php echo get_the_post_thumbnail( $post->id, array(56,56), $attr ); ?> 
 		</div>
 		<div class="info">
-		<h3 class="entry-title"><a title="<?php echo $post->post_title; ?>" href="<?php echo get_permalink($post->id); ?>" class="popular_posts_description"><?php echo $post->post_title; ?></a></h3>
+		<div class="entry-title">
+			<a title="<?php echo $post->post_title; ?>" href="<?php echo get_permalink($post->id); ?>" class="popular_posts_description"><?php echo $post->post_title; ?>
+			</a>
+		</div>
 		</div> <!--end .info-->
 		<div class="clear"></div>
 		</li>

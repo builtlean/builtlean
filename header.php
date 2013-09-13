@@ -75,7 +75,7 @@
 
 						(function() { 
 							var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-							ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+							ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
 							var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 						})();
 
@@ -88,7 +88,7 @@
 							_gaq.push(['_trackPageview']);
 						(function() { 
 							var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-							ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+							ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
 							var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 						})();
 
@@ -163,6 +163,16 @@
 			</style>
 	<?php } ?>
 <style type="text/css">
+#menu-hover #menu-item-13091 ul #menu-item-13100 ul.sub-menu2 li#menu-item-19055 a{
+	background: url(http://www.builtlean.com/wp-content/themes/builtlean/images/video-training.jpg) top left no-repeat !important;
+	width: 150px !important;
+	height: 82px !important;
+	border-radius: 0px !important;
+}
+
+.related_p  ul li a abbr {
+		display:none;
+}
 .optinbox {float: right;
 	display: block;
 	width: 300px;
@@ -195,11 +205,12 @@
 }
 .optinbox-submit input[type="submit"] {
 	width: 71px;
-	height: 56px;
 	border: none;
 	background: url(http://files.builtlean.com/wp-content/themes/builtlean/images/button_send.gif) no-repeat;
 	text-indent: -9999px;
-	cursor: pointer;
+	cursor: pointer;	
+	height: 42px;
+	margin-bottom:15px;
 }
 .optinbox-submit input[type="submit"]:hover {
 	background-position: 0 -57px;
@@ -246,6 +257,116 @@
 
 .printfriendly img{margin:3px 1px 0 7px !important;}
 .printfriendly span{font-size:11px !important;}
+
+
+
+#subscribe_ribbon{background:url(http://files.builtlean.com/wp-content/themes/builtlean/images/banner_Chri.png) no-repeat center top;height:170px;}
+#ribbon_text_input{height:19px;font-size:14px;background:#fff;border:2px solid #ECECEC;border-radius:5px;left:631px;padding:9px 76px 9px 10px;position:absolute;top:57px;width:215px;}
+#ribbon_submit_input{width:72px;height:36px;background:url(http://files.builtlean.com/wp-content/themes/builtlean/images/a1.jpg);border-radius:5px;border:1px solid #C20001;font-size:22px;font-weight:normal;left:862px;letter-spacing:-1px;padding:3px;top:59px;}
+#ribbon_submit_input:hover{background:url(http://files.builtlean.com/wp-content/themes/builtlean/images/a2.jpg);}
+#to_privacy{left:827px;top:101px;width:73px;} 
+ 
+.author-details-top{height:112px;}
+.author-name{margin-top:-15px;}
+
+.testimonial-footer a{margin-left:10px;}
+
+
+.blocks p.title{
+		color: #fff;
+		padding: 0;
+		font-size: 13px;
+		text-transform: uppercase;
+		margin: 20px 0 6px;		
+		font-weight: bold;
+}
+
+.title_list{
+	margin-bottom: 0px !important;
+	}
+	
+.related_p p.title{
+	font-size:15px;
+	font-family: Arial, Helvetica, Sans-serif;
+	margin-bottom: 0px;
+	margin-top: 0px;
+}	
+
+#comments .title{
+	margin: 20px 0;
+	font-size: 15px;
+	font-weight: bold;
+	color: #333;
+}
+
+#respond .title{
+	margin: 20px 0;
+	font-size: 15px;
+	font-weight: bold;
+	color: #333;
+}
+
+#popular-posts p.entry-title{
+	margin:0px ;
+}
+
+
+input.gsc-search-button{
+	background: url("<?php bloginfo('template_directory'); ?>/images/search_icon.jpg") #fff no-repeat !important;
+	color: transparent !important;
+	border: 0px !important;
+	min-width: 34px !important;
+	height: 26px !important;
+	padding: 0px !important;
+	position: absolute;
+	margin-left: -44px !important;
+	margin-top: -13px;
+}
+
+input.gsc-input{
+	padding: 6px 5px 7px 5px !important;
+	border: 1px solid #000 !important;
+	border-radius: 5px !important;
+	-moz-border-radius: 5px !important;
+	-webkit-border-radius: 5px !important;
+	-o-border-radius: 5px !important;
+}
+
+td.gsc-clear-button{
+	display:none !important;
+}
+
+#content-loop input.gsc-input{
+	border: 1px solid #999 !important;
+}
+
+#content-loop input.gsc-search-button{
+	margin-left: -46px !important;
+	}
+	
+.cse input.gsc-search-button, input.gsc-search-button{
+	font-size: 10px !important;
+}	
+
+<!-- Corrections-->
+.logo{
+	margin-top: 17px !important;
+}
+
+.logo a {
+	display: block;
+}
+
+.logo a img{
+		margin-bottom: 30px !important;
+}
+
+#menu-hover{
+	margin: 1px 0px 0px 0px !important;
+}
+#socialbuttons{
+	margin-top: 3px !important;
+}
 </style>
 </head>
 <body <?php body_class(); ?>>
@@ -263,31 +384,33 @@
 		fjs.parentNode.insertBefore(js, fjs);
 		}(document, 'script', 'facebook-jssdk'));
 	</script>
-	
 				<div id="primary-nav">
 					<div style="margin:0px auto; width:969px;">
-						<div class="logo"><a href="http://www.builtlean.com"><img src="<?php echo get_option('smartblog_logo'); ?>" alt="BuiltLean.com" id="logo"/></a></div> 
-						<div style="height: 20px; float:right; margin-top:18px; width:280px">
+						<div class="logo">
+							<a href="http://www.builtlean.com">
+								<img src="<?php echo get_option('smartblog_logo'); ?>" alt="BuiltLean.com" id="logo"/>
+								</a>
+						</div> 
+						<div style="height: 20px; float: right; margin-top: 18px; width: 366px; margin-right: 2px;">
 						<div id="cse-search-form" style="width: 100%;">Loading</div>
-				<!------------------
-				Google search
-				---------------------->
-					<script src="http://www.google.com/jsapi" type="text/javascript"></script>
-						<script type="text/javascript"> 
-						google.load('search', '1', {language : 'en', style : google.loader.themes.MINIMALIST});
-						google.setOnLoadCallback(function() {
-						var customSearchOptions = {};
-						var customSearchControl = new google.search.CustomSearchControl('013455458792431772096:WMX-725798303', customSearchOptions);
-							customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
-						var options = new google.search.DrawOptions();
-							options.setAutoComplete(true);
-							options.enableSearchboxOnly("http://www.builtlean.com", "s");
-							customSearchControl.draw('cse-search-form', options);
-						}, true);
-					</script>
+							<!------------------
+							Google search
+							---------------------->
+							<script src="http://www.google.com/jsapi" type="text/javascript"></script>
+								<script type="text/javascript"> 
+									google.load('search', '1', {language : 'en', style : google.loader.themes.MINIMALIST});
+									google.setOnLoadCallback(function() {
+									var customSearchOptions = {};
+									var customSearchControl = new google.search.CustomSearchControl('013455458792431772096:WMX-725798303', customSearchOptions);
+										customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
+									var options = new google.search.DrawOptions();
+										options.setAutoComplete(true);
+										options.enableSearchboxOnly("http://www.builtlean.com", "s");
+										customSearchControl.draw('cse-search-form', options);
+									}, true);
+							</script>
 						</div>
 					</div>
-
 						<div class="menu_top"> 
 						<!------------------
 						Start Main Menu Links
@@ -300,9 +423,7 @@
 								'depth' => 0,
 								'menu_id' => 'menu-hover',
 								'walker' => new My_Walker_Nav_Menu()));
-						?>		
-						
-						
+						?>
 							<div id="socialbuttons">
 								<div class="fb-like fb-from-header" data-href="https://www.facebook.com/builtlean" data-send="false" data-layout="button_count" data-width="150" data-show-faces="true"></div>
 								<a href="http://www.facebook.com/builtlean" target="_blank"><img src="http://www.builtlean.com/wp-content/themes/builtlean/images/facebook.png" width="32" height="32"></a>
@@ -311,8 +432,13 @@
 								<a href="http://feeds.feedburner.com/BuiltLean" target="_blank"><img src="http://www.builtlean.com/wp-content/themes/builtlean/images/rss.png" width="32" height="32"></a>
 							</div>
 						</div> <!-- end #menu_top -->
-			
 			<div class="clear"></div>
 		</div><!--#primary-nav-->
 		<div class="wrap container">
 			<div class="stickem-container">
+<script type="text/javascript">
+/*
+	jQuery(document).ready(function() {
+		jQuery(".ratingblock").click(function() { gdsr_rating_standard(this); });
+	});*/
+</script>

@@ -61,7 +61,7 @@
 	<div id="content" class="content <?php if(get_option('smartblog_homepage_layout') == 'Content | Sidebar') { echo('left'); } else { echo('right'); } ?>">	 
 	
 	<?php
-			$url = wp_get_referer();
+			$url = get_permalink();
 			$path_parts = pathinfo($url);
 			$path_lvl1 = explode("/", $path_parts['dirname']);
 			$path_lvl2 = explode("-", $path_parts['filename']);
@@ -84,8 +84,9 @@
 		<a href="<?php bloginfo('url'); echo'/blog'; ?>"> Blog </a>
 		<a href="<?php echo $path_parts['dirname'], "\n";?>"> <?php echo $path_lvl1[4]; ?> </a>
 		<a href="<?php echo $path_parts['dirname'],"/",$path_parts['filename'], "\n";?>"> <?php echo $lvl2 ?></a>		
-	<?php echo '</div>';
-	}
+	<?php 
+		echo '</div>';
+		}
 	?>	
 	<?php 
 	if(is_single() || is_page()) {
@@ -132,7 +133,11 @@
  		 		</div>
     		</div>
  <div class="related_p">
-    <?php related_posts(); ?>
+	 
+    <?php 
+   // tj_related_posts($post->ID); 
+   related_posts();
+   ?>
     </div>
 <div class="clear"></div>
 <?php if ( ! comments_open() ) : ?>

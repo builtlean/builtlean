@@ -20,7 +20,7 @@
 	<div id="footer">
 		<div id="footer-content">
 			<div class="blocks no-padd">
-				<h2>Join our email list</h2>
+				<p class="title">Join our email list</p>
 				<p>Join our email list for exclusive offers and weekly updates</p>
 					<form action="https://builtlean.infusionsoft.com/AddForms/processFormSecure.jsp" target="_blank" onsubmit="_gaq.push(['_setCustomVar', 1, 'newsletter sign up', 'footer', 1]);_gaq.push(['_trackEvent', 'newsletter', 'sign up', 'footer']);" method="POST">
 					 <input type="hidden" name="infusion_xid" id="infusion_xid" value="7b5c4c539110daaf295e6bf49596ccc0">
@@ -42,7 +42,7 @@
 				</form>
 			</div>
 			<div class="blocks">
-				<h2>Connect with us</h2>
+				<p class="title">Connect with us</p>
 				<p>Follow Us On:</p>
 				<div id="socialbuttons" style="float: left;">
 					<a href="http://www.facebook.com/builtlean" target="_blank"><img src="http://www.builtlean.com/wp-content/themes/builtlean/images/facebook.png" width="32" height="32"></a>
@@ -51,7 +51,7 @@
 				</div>	
 			</div>
 			<div class="blocks">
-				<h2>Support</h2>
+				<p class="title">Support</p>
 				<?php
 					wp_nav_menu( array(
 						'theme_location' => 'support-nav',
@@ -65,7 +65,7 @@
 				?>
 			</div>  
 			<div class="blocks">
-				<h2>Company</h2>
+				<p class="title">Company</p>
 				<?php
 					wp_nav_menu( array(
 						'theme_location' => 'company-nav',

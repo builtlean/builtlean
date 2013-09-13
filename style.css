@@ -1849,12 +1849,13 @@ ul.landing-list {
 
 .optinbox-submit input[type="submit"] {
 	width: 218px;
-	height: 56px;
+	height: 42px;
 	border: none;
 	background: url(images/button_send.gif) no-repeat;
 	/*background: url(images/bg-btn-optin2.png) 0 0 no-repeat;*/
 	text-indent: -9999px;
 	cursor: pointer;
+	margin-bottom:15px;
 }
 
 .optinbox-submit input[type="submit"]:hover {
@@ -2672,6 +2673,8 @@ background-position-x: 10px;
 				margin-left:0px;
 			}
 			
+			
+			
 			#menu-hover li ul.sub-menu1 li ul.sub-menu2 li{
 
 				height: 15px;
@@ -2679,7 +2682,6 @@ background-position-x: 10px;
 				margin-bottom: 10px;
 				line-height: 27px !important;
 			}
-			
 			
 			
 			#menu-hover li ul.sub-menu1 li ul.sub-menu2 li a{
@@ -2698,6 +2700,7 @@ background-position-x: 10px;
 				
 				
 			}
+			
 			
 			
 /* Blog Menu 2nd var */

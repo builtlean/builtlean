@@ -3,7 +3,7 @@
 Template Name: Links
 */
 ?>
-<?php get_header(); ?>	
+<?php get_header(); ?>
 <div id="content" class="<?php if(get_option('smartblog_homepage_layout') == 'Content | Sidebar') { echo('left'); } else { echo('right'); } ?>">
 <?php include(TEMPLATEPATH. '/includes/templates/breadcrumbs.php'); ?>
 <?php the_post(); ?>

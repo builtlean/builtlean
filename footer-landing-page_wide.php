@@ -6,7 +6,7 @@
 		<img src="http://www.builtlean.com/wp-content/themes/builtlean/images/footer_logo.jpg" width="189" height="25" alt="logo"/>
 		</div>
 		<p align="center">Copyright &copy; 2013 BuiltLean. All Rights Reserved. <a href="http://www.builtlean.com/privacy-policy/" rel="nofollow">Privacy Policy</a> | <a href="http://www.builtlean.com/terms-of-use" rel="nofollow">Terms of Use</a></p>
-		<p align="center">This website is for informational purposes only and is no way intended as medical counseling, or medical advice.<br /> Results may vary. Proper diet and exercise are necessary to achieve weight loss and muscle definition. <br />Photo testimonials shown are of people who worked very hard to get great results and are not typical.</p>
+		<p align="center">* This website is for informational purposes only and is no way intended as medical counseling, or medical advice.<br /> Results may vary. Proper diet and exercise are necessary to achieve weight loss and muscle definition. <br />Photo testimonials shown are of people who worked very hard to get great results and are not typical.</p>
 	<div class="clear"></div>
 		</div>
 		<div class="clear"></div>

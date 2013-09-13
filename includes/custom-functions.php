@@ -153,7 +153,7 @@ function tj_related_posts() {
 	  );
 	  $my_query = new WP_Query($args);
 	  if( $my_query->have_posts() ) { $related_post_found = true; ?>
-		<h3><?php _e('Related Articles','themejunkie'); ?></h3>
+		<p class="title"><?php _e('Related Articles','themejunkie'); ?></p>
 		<div class="clear"></div>
 			<ul>		
 	    <?php while ($my_query->have_posts()) : $my_query->the_post(); ?>
@@ -167,7 +167,7 @@ function tj_related_posts() {
 	
 	//show recent posts if no related found
 	if(!$related_post_found){ ?>
-		<h3><?php _e('Recent Posts','themejunkie'); ?></h3>
+		<p class="title"><?php _e('RELATED ARTICLES','themejunkie'); ?></p>
 		<div class="clear"></div>		
 		<ul>
 		<?php
